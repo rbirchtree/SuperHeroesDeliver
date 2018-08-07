@@ -9,6 +9,8 @@ export class LoginForm extends React.Component {
         return this.props.dispatch(login(values.username, values.password));
     }
 
+    
+
     render() {
         let error;
         if (this.props.error) {

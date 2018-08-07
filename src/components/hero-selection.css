@@ -1,0 +1,17 @@
+label {
+	display: block;
+	padding: 5px;
+}
+div {
+	text-align: center;
+	width: 600px;
+	margin: auto;
+}
+
+form {
+	display: inline-block;
+}
+
+button{
+	margin: 5px;
+}

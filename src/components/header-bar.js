@@ -1,5 +1,8 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import { Link} from 'react-router-dom';
+import './header-bar.css';
+
 import {clearAuth} from '../actions/auth';
 import {clearAuthToken} from '../local-storage';
 
@@ -19,7 +22,7 @@ export class HeaderBar extends React.Component {
         }
         return (
             <div className="header-bar">
-                <h1>Foo App</h1>
+                <Link to={'/'}><h1>Superheros Deliver</h1></Link>
                 {logOutButton}
             </div>
         );
