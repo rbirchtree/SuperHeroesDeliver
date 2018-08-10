@@ -6,6 +6,7 @@ import HeaderBar from './header-bar';
 import About from './about';
 import LandingPage from './landing-page';
 import Dashboard from './dashboard';
+import Orders from './orders'
 import RegistrationPage from './registration-page';
 import NotFound from './NotFound';
 
@@ -50,7 +51,7 @@ export class App extends React.Component {
                 <Switch>
                     
                     <Route exact path="/" component={LandingPage} />
-                    <Route exact path="/dashboard" component={Dashboard} />
+                    <Route exact path="/dashboard" component={Orders} />
                     <Route exact path="/register" component={RegistrationPage} />
                     <Route exact path="/about" component={About} />
                     <Route component={NotFound} />
