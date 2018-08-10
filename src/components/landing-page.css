@@ -1,3 +1,21 @@
 a {
-	margin: 20px 20px;
+	/* margin: 20px 20px; */
+	text-decoration: none;
+}
+
+.aboutLink{
+	position: fixed;
+	margin:auto;
+	text-align: center;
+	bottom: 0px;
+	display: block
+}
+
+.registerLink{
+	display: block;
+}
+
+a:hover {
+	padding: 5px;	
+	border-radius: 4px;
 }

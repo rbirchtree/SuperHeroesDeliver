@@ -4,7 +4,6 @@ label {
 }
 div {
 	text-align: center;
-	width: 600px;
 	margin: auto;
 }
 
@@ -13,5 +12,12 @@ form {
 }
 
 button{
-	margin: 5px;
+	display: block;
+	margin: 5px auto;
+
+}
+
+textarea{
+	display: block;
+	margin: 5px auto;
 }

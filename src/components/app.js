@@ -47,7 +47,7 @@ export class App extends React.Component {
             
             <Router>
                 <div>
-                    <HeaderBar />    
+                <HeaderBar />     
                 <Switch>
                     
                     <Route exact path="/" component={LandingPage} />
@@ -56,7 +56,9 @@ export class App extends React.Component {
                     <Route exact path="/about" component={About} />
                     <Route component={NotFound} />
                 </Switch>
+                
                 </div>
+
             </Router>
             
         );

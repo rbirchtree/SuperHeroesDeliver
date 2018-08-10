@@ -14,7 +14,7 @@ class Orders extends React.Component {
     		<form onSubmit={e => e.preventDefault()}>
     			<div>
     				<label htmlFor="hero-selection">Hero Selection</label>
-    					<select name="hero">
+    					<select name="hero" id="hero">
 							<option value="Batman">Batman</option>
 	    					<option value="Spiderman">Spiderman</option>
 	    					<option value="Captain America">Captain America</option>
@@ -22,7 +22,7 @@ class Orders extends React.Component {
 	    					<option value="Storm">Storm</option>
     					</select>
 					<label htmlFor="places-selection">Places to Deliver</label>
-					<select name="places">
+					<select name="places" id="places">
 						<option value="Dell Children">Dell Children's Medical Center (Hospital)
 												4900 Mueller Blvd 
 												Austin, TX 78723
@@ -41,8 +41,14 @@ class Orders extends React.Component {
 						</option>
 					</select>
 						<label for="deliveryDate">Delivery Date</label>
-						<input id="deliveryDate" type="date" value="2018-08-09"/> 						
-    			
+						<input id="deliveryDate" type="date" value="2018-08-09"/>
+						<label for="instructions">Special Instructions</label>
+					<textarea rows="5" cols="30"  id="instructions">Your dad says get well soon and happy birthday.
+					</textarea>
+					<select name="payment">
+						<option value="paypal">Paypal</option>
+						<option value="creditcard">Credit Card</option>
+					</select>
     			<button>Submit</button>
     			</div>
     		</form>

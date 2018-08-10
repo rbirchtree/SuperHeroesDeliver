@@ -1,3 +1,19 @@
 a {
 	color: black;	
 }
+
+.logoutBtn{
+	display: inline;
+	position: fixed;
+	background-color: rgb(255,255,255);
+	border: solid black;
+	right: 10px;
+	top: 5px;
+	background-color: white;
+	border-radius: 3px;
+}
+
+.exclamation{
+	color:red;
+	font-size: 1.3em;
+}

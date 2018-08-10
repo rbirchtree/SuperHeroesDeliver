@@ -2,12 +2,19 @@ p {
 	font-size: .9em;
 	font-family: comic-sans;
 	margin: 0 20px;
+	text-align: left;
 }
 
 h1 {
-	background-color: rgb(126,249,255);
+	background-color: rgb(255,255,255);
 	font-family: comic-sans;
 	display: inline-block;
-	border-radius: 3px;
+	border: solid black;
+	border-radius: 4px;
+	padding: 4px;
 	margin-left: 20px;
+}
+
+.about{
+	width: 600px;
 }
