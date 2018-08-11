@@ -21,3 +21,11 @@ textarea{
 	display: block;
 	margin: 5px auto;
 }
+
+img{
+	width: 200px;
+	display: block;
+	margin: auto;
+	border: solid black 3px;
+	border-radius: 4px;
+}

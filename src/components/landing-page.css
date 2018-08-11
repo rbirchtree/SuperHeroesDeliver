@@ -19,3 +19,8 @@ a:hover {
 	padding: 5px;	
 	border-radius: 4px;
 }
+
+.exclamation{
+	color:red;
+	font-size: 1.3em;
+}

@@ -18,8 +18,6 @@ class Orders extends React.Component {
 							<option value="Batman">Batman</option>
 	    					<option value="Spiderman">Spiderman</option>
 	    					<option value="Captain America">Captain America</option>
-	    					<option value="Wonder Woman">Wonder Woman</option>
-	    					<option value="Storm">Storm</option>
     					</select>
 					<label htmlFor="places-selection">Places to Deliver</label>
 					<select name="places" id="places">
@@ -50,6 +48,9 @@ class Orders extends React.Component {
 						<option value="creditcard">Credit Card</option>
 					</select>
     			<button>Submit</button>
+    			<img src={require('../images/Batman.jpg')} alt="Batman" />
+    			<img src={require('../images/Superman.jpg')} alt="Superman" />
+    			<img src={require('../images/Spiderman.jpg')} alt="Spiderman" />
     			</div>
     		</form>
         );
