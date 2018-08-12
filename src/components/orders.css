@@ -29,3 +29,17 @@ img{
 	border: solid black 3px;
 	border-radius: 4px;
 }
+label{
+	font-style: bold;
+	padding: 3px;
+	margin: 10px auto;
+}
+
+button{
+	background-color: white;
+	color: black;
+	font-size: 1.2em;
+	border: solid black 3px;
+	border-radius: 4px;
+	margin:20px auto;
+}

@@ -1,0 +1,13 @@
+h2 {
+	margin:auto;
+}
+
+.loginBtn{
+	display: block;
+	background-color: white;
+	color: black;
+	font-size: 1.2em;
+	/* border: solid black 3px; */
+	/* border-radius: 4px; */
+	margin:20px auto;
+}

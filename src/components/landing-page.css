@@ -13,6 +13,10 @@ a {
 
 .registerLink{
 	display: block;
+	background-color: white;
+	color: black;
+	font-size: 1.2em;
+	margin:20px auto;
 }
 
 a:hover {

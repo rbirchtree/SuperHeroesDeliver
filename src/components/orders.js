@@ -9,17 +9,28 @@ class Orders extends React.Component {
         this.props.dispatch(fetchProtectedData());
     }
 
+    onSubmit(values){
+    	
+    }
+
     render() {
         return (
-    		<form onSubmit={e => e.preventDefault()}>
+    		<form 
+    		onSubmit={e => e.preventDefault()}>
     			<div>
-    				<label htmlFor="hero-selection">Hero Selection</label>
+    				<label htmlFor="hero">Hero Selection</label>
     					<select name="hero" id="hero">
 							<option value="Batman">Batman</option>
 	    					<option value="Spiderman">Spiderman</option>
 	    					<option value="Captain America">Captain America</option>
     					</select>
-					<label htmlFor="places-selection">Places to Deliver</label>
+    					<label htmlFor="gift">Gift</label>
+    					<select name="gift" id="gift">
+							<option value="chocolate">Chocolate</option>
+	    					<option value="flowers">Flowers</option>
+	    					<option value="none">-None-</option>
+    					</select>
+					<label htmlFor="places">Places to Deliver</label>
 					<select name="places" id="places">
 						<option value="Dell Children">Dell Children's Medical Center (Hospital)
 												4900 Mueller Blvd 
@@ -40,8 +51,12 @@ class Orders extends React.Component {
 					</select>
 						<label for="deliveryDate">Delivery Date</label>
 						<input id="deliveryDate" type="date" value="2018-08-09"/>
-						<label for="instructions">Special Instructions</label>
-					<textarea rows="5" cols="30"  id="instructions">Your dad says get well soon and happy birthday.
+						<label for="instructions">Instructions</label>
+					<textarea rows="5" cols="30"  id="instructions">
+					To: John Doe
+					From: Jane Doe
+					Room#:123
+					Note: Happy Birthday, get well soon! Here are some flowers from Batman!
 					</textarea>
 					<select name="payment">
 						<option value="paypal">Paypal</option>
