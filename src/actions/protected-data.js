@@ -13,6 +13,18 @@ export const fetchProtectedDataError = error => ({
     error
 });
 
+export const FETCH_POST_DATA_SUCCESS = 'FETCH_POST_DATA_SUCCESS';
+export const fetchPostDataSuccess = data => ({
+    type: FETCH_POST_DATA_SUCCESS,
+    data
+});
+
+export const FETCH_POST_DATA_ERROR = 'FETCH_POST_DATA_ERROR';
+export const fetchPostDataError = error => ({
+    type: FETCH_POST_DATA_ERROR,
+    error
+});
+
 export const fetchProtectedData = () => (dispatch, getState) => {
     const authToken = getState().auth.authToken;
     return fetch(`${API_BASE_URL}/protected`, {
