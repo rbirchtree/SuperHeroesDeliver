@@ -1,72 +1,55 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
+import {reduxForm, Field} from 'redux-form';
 import {fetchProtectedData} from '../actions/protected-data';
 import './orders.css';
 
+
+
 class Orders extends React.Component {
-    componentDidMount() {
+    /*componentDidMount() {
         this.props.dispatch(fetchProtectedData());
-    }
+    }*/
 
     onSubmit(values){
-    	
+    	console.log(values)
     }
 
     render() {
+    	const { handleSubmit } = this.props;
         return (
     		<form 
-    		onSubmit={e => e.preventDefault()}>
-    			<div>
-    				<label htmlFor="hero">Hero Selection</label>
-    					<select name="hero" id="hero">
-							<option value="Batman">Batman</option>
-	    					<option value="Spiderman">Spiderman</option>
-	    					<option value="Captain America">Captain America</option>
-    					</select>
-    					<label htmlFor="gift">Gift</label>
-    					<select name="gift" id="gift">
-							<option value="chocolate">Chocolate</option>
-	    					<option value="flowers">Flowers</option>
-	    					<option value="none">-None-</option>
-    					</select>
-					<label htmlFor="places">Places to Deliver</label>
-					<select name="places" id="places">
-						<option value="Dell Children">Dell Children's Medical Center (Hospital)
-												4900 Mueller Blvd 
-												Austin, TX 78723
-						</option>
-						<option value="Seton">Seton Medical Center
-											   1201 W 38th St 
-											   Austin, TX 78705
-						</option>
-						<option value="St.Davids">St. Davids
-											   919 East 32nd Street
-											   Austin, TX 78705-2709
-						</option>
-						<option value="DellSeton">Dell Seton Medical Center @ UT
-											   1500 Red River St
-											   Austin, TX 78701
-						</option>
-					</select>
-						<label for="deliveryDate">Delivery Date</label>
-						<input id="deliveryDate" type="date" value="2018-08-09"/>
-						<label for="instructions">Instructions</label>
-					<textarea rows="5" cols="30"  id="instructions">
-					To: John Doe
-					From: Jane Doe
-					Room#:123
-					Note: Happy Birthday, get well soon! Here are some flowers from Batman!
-					</textarea>
-					<select name="payment">
-						<option value="paypal">Paypal</option>
-						<option value="creditcard">Credit Card</option>
-					</select>
-    			<button>Submit</button>
+    		onSubmit={handleSubmit(values => this.onSubmit(values))}>
+    			<label>Superhero Selection</label>
+		        <div>
+		          <Field name="superhero" component="select">
+		            <option />
+		            <option value="Batman">Batman</option>
+		            <option value="Superman">Superman</option>
+		            <option value="Spiderman">Spiderman</option>
+		          </Field>
+		        </div>
+		        <div>
+		          <label>Gift Selection</label>
+		          <Field name="gift" component="select">
+		            <option />
+		            <option value="Chocolate">Chocolate</option>
+		            <option value="Flowers">Flowers</option>
+		            <option value="none">-none-</option>
+		          </Field>
+		          <label>Delivery Date</label>
+		          <Field
+			          name="notes"
+			          component="textarea"
+			          placeholder="8/1/18 @ 3:00PM"
+			        />
+		          
+		        </div>
+    			<button type="submit">Submit</button>
     			<img src={require('../images/Batman.jpg')} alt="Batman" />
     			<img src={require('../images/Superman.jpg')} alt="Superman" />
     			<img src={require('../images/Spiderman.jpg')} alt="Spiderman" />
-    			</div>
     		</form>
         );
     }
@@ -84,4 +67,10 @@ const mapStateToProps = state => {
     };
 };
 
-export default requiresLogin()(connect(mapStateToProps)(Orders));
+
+//export default requiresLogin()(connect(reduxForm({ form: 'OrderForm'})(Orders)
+export default reduxForm({
+	form: 'OrderForm',
+	requiresLogin
+})(Orders)
+
