@@ -21,16 +21,29 @@ class Orders extends React.Component {
         return (
     		<form 
     		onSubmit={handleSubmit(values => this.onSubmit(values))}>
-    			<label>Superhero Selection</label>
+    			
 		        <div>
+	        	<label>To</label>
+	        	<Field
+	        	 name="giftTo"
+	        	 component="input"
+	        	 type="text"
+	        	 placeholder="John Doe"
+	        	 />
+	        	 <label>From</label>
+	        	 <Field
+	        	 name="giftFrom"
+	        	 component="input"
+	        	 type="text"
+	        	 placeholder="Jane Doe"
+	        	 />
+	        	 <label>Superhero Selection</label>
 		          <Field name="superhero" component="select">
 		            <option />
 		            <option value="Batman">Batman</option>
 		            <option value="Superman">Superman</option>
 		            <option value="Spiderman">Spiderman</option>
 		          </Field>
-		        </div>
-		        <div>
 		          <label>Gift Selection</label>
 		          <Field name="gift" component="select">
 		            <option />
@@ -38,13 +51,44 @@ class Orders extends React.Component {
 		            <option value="Flowers">Flowers</option>
 		            <option value="none">-none-</option>
 		          </Field>
+		          <label> Delivery Place</label>
+		          <Field name="deliveryPlace" component="select">
+						<option>Dell Children's Medical Center (Hospital)
+												4900 Mueller Blvd 
+												Austin, TX 78723
+						</option>
+						<option>Seton Medical Center
+											   1201 W 38th St 
+											   Austin, TX 78705
+						</option>
+						<option>St. Davids
+											   919 East 32nd Street
+											   Austin, TX 78705-2709
+						</option>
+						<option>Dell Seton Medical Center @ UT
+											   1500 Red River St
+											   Austin, TX 78701
+						</option>
+					</Field>
 		          <label>Delivery Date</label>
 		          <Field
-			          name="notes"
+			          name="deliveryDate"
 			          component="textarea"
 			          placeholder="8/1/18 @ 3:00PM"
 			        />
-		          
+		          <label>Special Instructions</label>
+		          <Field
+		          	rows="5"
+		          	name="instructions"
+		          	component="textarea"
+		          	placeholder="Deliver to Room #123. Say happy birthday from Batman, your dad is sorry he couldn't make it. This is the best he could do."
+		          	/>
+		          <label>Payment</label>
+	          	  <Field name="payment" component="select">
+	          	  	<option/>
+	          	  	<option value="Credit Card">Credit Card</option>
+	          	  	<option value="Paypal">Paypal</option>
+	          	  </Field>
 		        </div>
     			<button type="submit">Submit</button>
     			<img src={require('../images/Batman.jpg')} alt="Batman" />
