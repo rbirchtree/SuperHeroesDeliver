@@ -44,11 +44,11 @@ export default function reducer(state = initialState, action) {
     } else if (action.type === ORDER_FAIL){
         return Object.assign({}, state, {
             error: action.error
-        })
+        });
     } else if (action.type === ORDER_SUCCESS){
         return Object.assign({}, state, {
             order: action.order
-        })
+        });
     }
     return state;
 }

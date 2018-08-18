@@ -2,18 +2,14 @@ import React from 'react';
 import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
 import {reduxForm, Field} from 'redux-form';
-import {fetchProtectedData} from '../actions/protected-data';
+import {submitOrder} from '../actions/auth';
 import './orders.css';
 
 
 
 class Orders extends React.Component {
-    /*componentDidMount() {
-        this.props.dispatch(fetchProtectedData());
-    }*/
-
     onSubmit(values){
-    	console.log(values)
+    	return this.props.dispatch(submitOrder(values));  	
     }
 
     render() {
@@ -61,7 +57,7 @@ class Orders extends React.Component {
 											   1201 W 38th St 
 											   Austin, TX 78705
 						</option>
-						<option>St. Davids
+						<option>St. David's
 											   919 East 32nd Street
 											   Austin, TX 78705-2709
 						</option>
