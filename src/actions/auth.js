@@ -39,6 +39,12 @@ export const orderFail = error => ({
     error
 });
 
+export const DELETE_SUCCESS = 'DELETE_SUCCESS';
+export const deleteOrder = deleteSuccess => ({
+    type: DELETE_SUCCESS,
+    deleteSuccess
+});
+
 export const ORDER_SUCCESS = 'ORDER_SUCCESS'
 export const orderSuccess = order => ({
     type: ORDER_SUCCESS,
@@ -150,3 +156,5 @@ export const submitOrder = (order) => dispatch => {
             })
     );
 };
+
+

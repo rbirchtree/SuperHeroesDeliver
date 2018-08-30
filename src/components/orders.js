@@ -1,52 +1,79 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
-import {reduxForm, Field} from 'redux-form';
+import Superhero from './superhero';
+import {reduxForm, Field, focus, formValueSelector} from 'redux-form';
 import {submitOrder} from '../actions/auth';
 import './orders.css';
-
+import {required, nonEmpty} from '../validators';
 
 
 class Orders extends React.Component {
+	constructor(props){
+		super(props);
+		this.state = {
+			hero: 'Batman'
+		};
+	}
+
     onSubmit(values){
-    	return this.props.dispatch(submitOrder(values));  	
+    	const {giftTo, giftFrom, superhero, gift, deliveryPlace, deliveryDate, instructions, payment} = values;
+    	
+    	const order = {giftTo, giftFrom, superhero, gift, deliveryDate, deliveryPlace, instructions, payment};
+    	console.log(order,'order');
+    	
+    	console.log(order,'order');
+    	return this.props.dispatch(submitOrder(order))
     }
 
     render() {
     	const { handleSubmit } = this.props;
         return (
-    		<form 
+    		<form id="orderForm" 
     		onSubmit={handleSubmit(values => this.onSubmit(values))}>
-    			
 		        <div>
-	        	<label>To</label>
-	        	<Field
-	        	 name="giftTo"
-	        	 component="input"
-	        	 type="text"
-	        	 placeholder="John Doe"
-	        	 />
-	        	 <label>From</label>
-	        	 <Field
-	        	 name="giftFrom"
-	        	 component="input"
-	        	 type="text"
-	        	 placeholder="Jane Doe"
-	        	 />
-	        	 <label>Superhero Selection</label>
-		          <Field name="superhero" component="select">
-		            <option />
-		            <option value="Batman">Batman</option>
-		            <option value="Superman">Superman</option>
-		            <option value="Spiderman">Spiderman</option>
-		          </Field>
-		          <label>Gift Selection</label>
-		          <Field name="gift" component="select">
-		            <option />
-		            <option value="Chocolate">Chocolate</option>
-		            <option value="Flowers">Flowers</option>
-		            <option value="none">-none-</option>
-		          </Field>
+		        	<div className="row">
+		        		<div className="column">
+				        	<label>To</label>
+				        	<Field
+				        	 name="giftTo"
+				        	 component="input"
+				        	 type="text"
+				        	 placeholder="John Doe"
+				        	 validate={[required, nonEmpty]}
+				        	 />
+			        	 </div>
+			        	 <div className="column">
+				        	 <label>From</label>
+				        	 <Field
+				        	 name="giftFrom"
+				        	 component="input"
+				        	 type="text"
+				        	 placeholder="Jane Doe"
+				        	 validate={[required, nonEmpty]}
+				        	 />
+			        	 </div>
+		        	 </div>
+	        	 	<div className="row">
+		        		<div className="column">
+				        	 <label>Superhero Selection</label>
+					          <Field name="superhero" component="select">
+					            <option />
+					            <option value="Batman">Batman</option>
+					            <option value="Superman">Superman</option>
+					            <option value="Spiderman">Spiderman</option>
+					          </Field>
+				          </div>
+				          <div className="column">
+					          <label>Gift Selection</label>
+					          <Field name="gift" component="select">
+					            <option />
+					            <option value="Chocolate">Chocolate</option>
+					            <option value="Flowers">Flowers</option>
+					            <option value="none">-none-</option>
+					          </Field>
+				          </div>
+			          </div>
 		          <label> Delivery Place</label>
 		          <Field name="deliveryPlace" component="select">
 						<option>Dell Children's Medical Center (Hospital)
@@ -71,6 +98,7 @@ class Orders extends React.Component {
 			          name="deliveryDate"
 			          component="textarea"
 			          placeholder="8/1/18 @ 3:00PM"
+			          validate={[required, nonEmpty]}
 			        />
 		          <label>Special Instructions</label>
 		          <Field
@@ -78,6 +106,7 @@ class Orders extends React.Component {
 		          	name="instructions"
 		          	component="textarea"
 		          	placeholder="Deliver to Room #123. Say happy birthday from Batman, your dad is sorry he couldn't make it. This is the best he could do."
+		          	validate={[required, nonEmpty]}
 		          	/>
 		          <label>Payment</label>
 	          	  <Field name="payment" component="select">
@@ -86,31 +115,21 @@ class Orders extends React.Component {
 	          	  	<option value="Paypal">Paypal</option>
 	          	  </Field>
 		        </div>
-    			<button type="submit">Submit</button>
-    			<img src={require('../images/Batman.jpg')} alt="Batman" />
-    			<img src={require('../images/Superman.jpg')} alt="Superman" />
-    			<img src={require('../images/Spiderman.jpg')} alt="Spiderman" />
+    			<button type="submit"
+    			 disabled={this.props.pristine || this.props.submitting}
+    			>Submit</button>
+    			<Superhero hero={this.state.hero}/>
     		</form>
         );
     }
 }
 
-const mapStateToProps = state => {
-    const {currentUser} = state.auth;
-    const now = String(new Date)
-    console.log(now)
-    return {
-        username: state.auth.currentUser.username,
-        name: `${currentUser.firstName} ${currentUser.lastName}`,
-        protectedData: state.protectedData.data,
-        dateToday: now
-    };
-};
 
+//does this work with my actions and reducers
 
 //export default requiresLogin()(connect(reduxForm({ form: 'OrderForm'})(Orders)
 export default reduxForm({
-	form: 'OrderForm',
+	form: 'orderForm',
 	requiresLogin
 })(Orders)
 

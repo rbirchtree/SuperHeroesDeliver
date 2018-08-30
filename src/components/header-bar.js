@@ -22,7 +22,7 @@ class HeaderBar extends React.Component {
         }
         return (
             <div className="header-bar">
-                <Link to={'/'}><h1>Superheros Deliver<span className="exclamation">!</span></h1></Link>
+                <Link to={'/'}><h1>Superheroes Deliver<span className="exclamation">!</span></h1></Link>
                 {logOutButton}
             </div>
         );
