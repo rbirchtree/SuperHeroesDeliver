@@ -12,7 +12,8 @@ export function LandingPage(props) {
 
     return (
         <div className="home">
-            <h4>Delivering flowers for thoses having hard times as superheroes...</h4>
+            <h4>You're far away and can't cheer up your love one, but a superhero can do it!</h4>
+            <h5>We can get Batman to deliver flowers to your love one 🦇</h5>
             <LoginForm />
             <Link className="registerLink" to="/register">Register</Link>
             <Link className="aboutLink" to="/about">About</Link>

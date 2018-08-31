@@ -1,0 +1,17 @@
+
+
+input{
+	width: 100px;
+}
+
+.login-form {
+	width: 30%;
+	margin-bottom: 20px;
+}
+
+
+@media screen and (max-device-width: 800px){
+	.login-form {
+		width: 50%;
+	}
+}

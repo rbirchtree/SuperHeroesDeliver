@@ -2,10 +2,20 @@ h2 {
 	margin:auto;
 }
 
-.loginBtn{
+.registration {
 	display: block;
 	background-color: white;
 	color: black;
 	font-size: 1.2em;
 	margin:20px auto;
+	border: solid black 3px;
+	border-radius: 4px;
+	text-decoration: none;
+	width: 7%;
+}
+
+.registration:hover{
+	display: block;
+	background-color: black;
+	color: white;
 }

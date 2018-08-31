@@ -1,5 +1,15 @@
 a {
-	color: black;	
+	color: black;
+	cursor: pointer;
+}
+
+a:hover{
+	color:white;
+	background-color: black;
+}
+
+.homepage{
+	border: none;
 }
 
 .logoutBtn{
@@ -16,4 +26,8 @@ a {
 .exclamation{
 	color:red;
 	font-size: 1.3em;
+}
+
+h1{
+	color:black;
 }
