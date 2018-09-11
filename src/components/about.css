@@ -16,4 +16,10 @@ h1 {
 
 .about{
 	width: 600px;
+	margin: auto;
+	background-color: white;
+	opacity: .8;
+	border: solid black 3px;
+	border-radius: 3px;
+	padding: 4px;
 }

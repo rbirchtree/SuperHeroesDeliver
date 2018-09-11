@@ -4,11 +4,11 @@ import './about.css';
 
 export default function About(){
 	return (
-		<div className="about">
+		<div>
 			<h1>About</h1>
-			<p>Super Heroes Delivers! is a non sequitur way to deliver laughter to children
+			<p className="about">Superheroes Delivers! is a non sequitur way to deliver laughter to children
 			 and adults who are in the hospital for a prolong period of time. Chocolates and flowers are nice, 
-			 but they are better when delivered by a superhero. Super Heroes Delivers ! was founded by Rob Birch.</p>
+			 but they are better when delivered by a superhero. Superheroes Delivers! was founded by Rob Birch.</p>
 		</div>
 		)
 }

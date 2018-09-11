@@ -27,7 +27,7 @@ class Orders extends React.Component {
     }
 
     render() {
-    	const { handleSubmit } = this.props;
+    	const { handleSubmit,error } = this.props;
         return (
     		<form id="orderForm" 
     		onSubmit={handleSubmit(values => this.onSubmit(values))}>
@@ -119,6 +119,7 @@ class Orders extends React.Component {
     			 disabled={this.props.pristine || this.props.submitting}
     			>Submit</button>
     			<Superhero hero={this.state.hero}/>
+    			{error && <strong>{error}</strong>}
     		</form>
         );
     }
