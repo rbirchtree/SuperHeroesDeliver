@@ -1,11 +1,10 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {Switch, Route, Link, withRouter,Redirect, BrowserRouter as Router} from 'react-router-dom';
+import {Switch, Route, withRouter, BrowserRouter as Router} from 'react-router-dom';
 
 import HeaderBar from './header-bar';
 import About from './about';
 import LandingPage from './landing-page';
-import Dashboard from './dashboard';
 import Orders from './orders'
 import RegistrationPage from './registration-page';
 import NotFound from './NotFound';

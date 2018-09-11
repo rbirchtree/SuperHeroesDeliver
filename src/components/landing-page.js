@@ -12,8 +12,8 @@ export function LandingPage(props) {
 
     return (
         <div className="home">
-            <h4>Far away and can't cheer up your love one? A Superhero can!</h4>
-            <h5>Get Batman to deliver flowers to your love one 🦇</h5>
+            <h2>Can't cheer up your love one? A Superhero can!</h2>
+            <h3>Get Batman to deliver flowers to them! <span role="img" aria-label="bat">🦇</span></h3>
             <LoginForm />
             <Link className="registerLink" to="/register">Register</Link>
             <Link className="aboutLink" to="/about">About</Link>

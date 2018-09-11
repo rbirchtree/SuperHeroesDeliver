@@ -1,6 +1,7 @@
 a {
 	color: black;
 	cursor: pointer;
+	background-color: white
 }
 
 a:hover{
@@ -30,4 +31,8 @@ a:hover{
 
 h1{
 	color:black;
+	border: solid black 3px;
+	display: inline-block;
+	border-radius: 3px;
+	background-color: white;
 }

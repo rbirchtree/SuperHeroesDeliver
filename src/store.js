@@ -10,7 +10,14 @@ const store = createStore(
     combineReducers({
         form: formReducer,
         auth: authReducer,
-        protectedData: protectedDataReducer
+        protectedData: protectedDataReducer,
+        notification: (state, action) => {
+    		if(action.type === "@@redux-form/SET_SUBMIT_SUCCEEDED" && action.meta.form === "registration") {
+    			return "registration succeded //switch for order form"
+    		}
+        	console.log(action)
+        	return null
+        }
     }),
     applyMiddleware(thunk)
 );
