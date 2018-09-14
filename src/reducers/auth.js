@@ -5,7 +5,8 @@ import {
     AUTH_SUCCESS,
     AUTH_ERROR,
     ORDER_FAIL,
-    ORDER_SUCCESS
+    ORDER_SUCCESS,
+    CURRENT_ORDERS
 } from '../actions/auth';
 
 const initialState = {
@@ -46,6 +47,10 @@ export default function reducer(state = initialState, action) {
             error: action.error
         });
     } else if (action.type === ORDER_SUCCESS){
+        return Object.assign({}, state, {
+            order: action.order
+        });
+    } else if (action.type === CURRENT_ORDERS) {
         return Object.assign({}, state, {
             order: action.order
         });

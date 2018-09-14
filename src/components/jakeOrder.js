@@ -7,42 +7,32 @@ import {submitOrder} from '../actions/auth';
 import './orders.css';
 import {required, nonEmpty} from '../validators';
 
+
 class Orders extends React.Component {
 	constructor(props){
 		super(props);
 		this.state = {
-			hero: 'Spiderman',
-			ordering: false
+			order: "No Order"
 		};
 	}
 
     onSubmit(values){
-    	
-    	const {giftTo, giftFrom, superhero, gift, deliveryPlace, deliveryDate, instructions, payment} = values;
+    	const {giftTo, giftFrom, superhero, gift, deliveryPlace, deliveryDate, instructions, payment} = values;    	
     	const order = {giftTo, giftFrom, superhero, gift, deliveryDate, deliveryPlace, instructions, payment};
-    	this.props.dispatch(submitOrder(order))
-    	this.setState({
-    		ordering: true
-    	});
-    	//setState redundant?
+    	console.log(order,'order');
+    	//return this.props.dispatch(submitOrder(order))
+    	if(this.props.order){
+    		return <p>Order received</p>	
+    	}
     }
 
     render() {
-    	if (this.state.ordering) {
-    		return(
-    				<p className="success">Order Received!</p>
-    			)
-    	}
-
     	const { handleSubmit,error } = this.props;
-        const message = "order submitted";
         return (
     		<form id="orderForm" 
-    		onSubmit={handleSubmit(values => this.onSubmit(values)
-    			)}>
+    		onSubmit={handleSubmit(values => this.onSubmit(values))}>
 		        <div>
 		        	<div className="row">
-		        		{this.props.orders && message}
 		        		<div className="column">
 				        	<label>To</label>
 				        	<Field
@@ -129,6 +119,7 @@ class Orders extends React.Component {
     			 disabled={this.props.pristine || this.props.submitting}
     			>Submit</button>
     			<Superhero hero={this.state.hero}/>
+    			{error && <strong>{error}</strong>}
     		</form>
         );
     }
@@ -138,7 +129,13 @@ class Orders extends React.Component {
 //does this work with my actions and reducers
 
 //export default requiresLogin()(connect(reduxForm({ form: 'OrderForm'})(Orders)
-export default reduxForm({
-	form: 'orderForm',
+function mapStateToProps(state) {
+	return {...state}
+}
+Orders = connect(mapStateToProps)(Orders)
+Orders = reduxForm({
+	form: 'OrderForm',
 	requiresLogin
 })(Orders)
+
+export default Orders;

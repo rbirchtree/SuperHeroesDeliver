@@ -16,6 +16,11 @@ export const clearAuth = () => ({
     type: CLEAR_AUTH
 });
 
+export const CURRENT_ORDERS = 'CURRENT_ORDERS';
+export const currentOrders = () => ({
+    type: CURRENT_ORDERS
+});
+
 export const AUTH_REQUEST = 'AUTH_REQUEST';
 export const authRequest = () => ({
     type: AUTH_REQUEST
@@ -39,16 +44,15 @@ export const orderFail = error => ({
     error
 });
 
-export const DELETE_SUCCESS = 'DELETE_SUCCESS';
-export const deleteOrder = deleteSuccess => ({
-    type: DELETE_SUCCESS,
-    deleteSuccess
-});
-
 export const ORDER_SUCCESS = 'ORDER_SUCCESS'
 export const orderSuccess = order => ({
     type: ORDER_SUCCESS,
     order
+});
+export const DELETE_SUCCESS = 'DELETE_SUCCESS';
+export const deleteOrder = deleteSuccess => ({
+    type: DELETE_SUCCESS,
+    deleteSuccess
 });
 
 // Stores the auth token in state and localStorage, and decodes and stores
@@ -119,9 +123,37 @@ export const refreshAuthToken = () => (dispatch, getState) => {
         });
 };
 
+export const getCurrentOrders = (orders) => dispatch => {
+    return (
+            fetch(`${API_BASE_URL}/order`,{
+                method: 'GET',
+                headers: {
+                    'Content-Type' : 'application/json',
+                    Authorization: `Bearer ${localStorage.getItem('authToken')}`
+                },
+                body: JSON.stringify(
+                        orders
+                    )
+            })
+        .then(res => normalizeResponseErrors(res))
+        .then(res => dispatch(currentOrders))
+        .catch(err => {
+           const {code} = err;
+                const message =
+                    code === 401
+                        ? 'Incorrect username or password'
+                        : 'Unable to submit order, please log in again';
+        dispatch(authError(err));
+        return Promise.reject(
+                new SubmissionError({
+                    _error: message
+                })
+            )
+        })
+        )
+}
+
 export const submitOrder = (order) => dispatch => {
-   // dispatch(authRequest());
-   // const authToken = getState().auth.authToken;
     return (
         fetch(`${API_BASE_URL}/order`, {
             method: 'POST',
@@ -131,14 +163,16 @@ export const submitOrder = (order) => dispatch => {
             },
             body: JSON.stringify(
                 order
-                //test with smaller object. use trip from frugal mail client for ref
             )
         })
             // Reject any requests which don't return a 200 status, creating
             // errors which follow a consistent format
             .then(res => normalizeResponseErrors(res))
-            .then(res => res.json())
-            .then(({authToken}) => storeAuthInfo(authToken, dispatch))
+            .then(res => dispatch(orderSuccess(res)))
+                //res.json(console.log("success lol make a dispatch")))
+            //
+            //action to display success console.log("success lol make a dispatch")
+            //.then(({authToken}) => storeAuthInfo(authToken, dispatch))
             .catch(err => {
                 const {code} = err;
                 const message =
@@ -146,8 +180,7 @@ export const submitOrder = (order) => dispatch => {
                         ? 'Incorrect username or password'
                         : 'Unable to submit order, please log in again';
                 dispatch(authError(err));
-                // Could not authenticate, so return a SubmissionError for Redux
-                // Form
+                // Could not authenticate, so return a SubmissionError for Redux Form
                 return Promise.reject(
                     new SubmissionError({
                         _error: message
@@ -156,5 +189,3 @@ export const submitOrder = (order) => dispatch => {
             })
     );
 };
-
-

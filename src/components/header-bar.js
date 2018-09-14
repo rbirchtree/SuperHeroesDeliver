@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import { Link} from 'react-router-dom';
 import './header-bar.css';
 
-import {clearAuth} from '../actions/auth';
+import {clearAuth, getCurrentOrders} from '../actions/auth';
 import {clearAuthToken} from '../local-storage';
 
 class HeaderBar extends React.Component {
@@ -12,12 +12,22 @@ class HeaderBar extends React.Component {
         clearAuthToken();
     }
 
+    getCurrentOrders(){
+        //make dispatch and check api
+        this.props.dispatch(getCurrentOrders());
+    }
+
     render() {
         // Only render the log out button if we are logged in
+        //add get all orders...
+        //delete all
         let logOutButton;
         if (this.props.loggedIn) {
             logOutButton = (
-                <Link className="logoutBtn" to="/"onClick={() => this.logOut()}>Log out</Link>
+                <ul>
+                    <li><Link className="logoutBtn" to="/"onClick={() => this.logOut()}>Log out</Link></li>
+                    <li><Link className="currentOrdersBtn" to="/"onClick={() => this.getCurrentOrders()}>Current Orders</Link></li>
+                </ul>
             );
         }
         return (
