@@ -11,7 +11,7 @@ export function LandingPage(props) {
     }
 
     return (
-        <div className="home">
+        <div>
             <h2>Can't cheer up your love one? A Superhero can!</h2>
             <h3>Get Batman to deliver flowers to them! <span role="img" aria-label="bat">🦇</span></h3>
             <LoginForm />

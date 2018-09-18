@@ -8,8 +8,14 @@ body {
 
 a{
 	text-decoration: none;
-	/* margin:20px auto; */
 	border-radius: 4px;
 	border: solid black 3px;
 	font-size:1.2em;
+}
+
+h2, h3{
+	background-color: white;
+	display: inline-block;
+	border: solid black 3px;
+	border-radius: 3px;
 }

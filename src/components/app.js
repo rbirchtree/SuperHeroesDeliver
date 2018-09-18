@@ -8,6 +8,7 @@ import LandingPage from './landing-page';
 import Orders from './orders'
 import RegistrationPage from './registration-page';
 import NotFound from './NotFound';
+import AllOrders from './allOrders';
 
 import {refreshAuthToken} from '../actions/auth';
 
@@ -53,6 +54,7 @@ class App extends React.Component {
                     <Route exact path="/dashboard" component={Orders} />
                     <Route exact path="/register" component={RegistrationPage} />
                     <Route exact path="/about" component={About} />
+                    <Route exact path="/allorders" component={AllOrders} />
                     <Route component={NotFound} />
                 </Switch>
                 

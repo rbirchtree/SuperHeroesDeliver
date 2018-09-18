@@ -28,3 +28,8 @@
 	color:red;
 	font-size: 1.3em;
 };
+
+h2 {
+	color: red !important;
+	background-color: blue;
+}
