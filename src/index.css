@@ -15,7 +15,19 @@ a{
 
 h2, h3{
 	background-color: white;
-	display: inline-block;
+	display: block;
 	border: solid black 3px;
 	border-radius: 3px;
+	margin: 10px auto;
+
+}
+
+h2{
+	font-size: 1.1em;
+	width: 20%;
+}
+
+h3{
+	font-size: 1.0em;
+	width: 25%;
 }
