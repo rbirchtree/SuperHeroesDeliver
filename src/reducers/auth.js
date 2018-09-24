@@ -1,3 +1,4 @@
+import _ from "lodash";
 import {
     SET_AUTH_TOKEN,
     CLEAR_AUTH,
@@ -6,15 +7,22 @@ import {
     AUTH_ERROR,
     ORDER_FAIL,
     ORDER_SUCCESS,
-    CURRENT_ORDERS
+    /*REQUEST_ORDERS,
+    RECEIVE_ORDERS*/
 } from '../actions/auth';
+
+import {
+    REQUEST_ORDERS,
+    RECEIVE_ORDERS
+} from '../actions/orders'
 
 const initialState = {
     authToken: null, // authToken !== null does not mean it has been validated
     currentUser: null,
     loading: false,
     error: null,
-    order: null
+    order: null,
+    orders: null
 };
 
 export default function reducer(state = initialState, action) {
@@ -50,10 +58,17 @@ export default function reducer(state = initialState, action) {
         return Object.assign({}, state, {
             order: action.order
         });
-    } else if (action.type === CURRENT_ORDERS) {
-        return Object.assign({}, state, {
-            order: action.order
+    } else if (action.type === REQUEST_ORDERS){ 
+        console.log(action,action.type)
+        return Object.assign({},state, {
+            order: action.orders,
+            loading: false
         });
+    } else if (action.type === RECEIVE_ORDERS){
+        return Object.assign({},state,{
+            order: action.order,
+            loading: true
+        })
     }
     return state;
 }

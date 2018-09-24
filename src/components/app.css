@@ -1,6 +1,6 @@
 body {
   font-family: sans-serif;
-  background-image: url('./images/hospital.jpg');
+  background-image: url('../images/hospital.jpg');
   background-size:cover;
   background-repeat: no-repeat;
   background-color: white;

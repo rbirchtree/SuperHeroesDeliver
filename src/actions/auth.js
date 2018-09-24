@@ -16,10 +16,15 @@ export const clearAuth = () => ({
     type: CLEAR_AUTH
 });
 
-export const CURRENT_ORDERS = 'CURRENT_ORDERS';
-export const currentOrders = () => ({
-    type: CURRENT_ORDERS
+/*export const REQUEST_ORDERS = 'REQUEST_ORDERS';
+export const requestOrders = () => ({
+    type: REQUEST_ORDERS
 });
+
+export const RECEIVE_ORDERS = 'RECEIVE_ORDERS'
+export const receiveOrders = (json) => ({
+  type: RECEIVE_ORDERS
+});*/
 
 export const AUTH_REQUEST = 'AUTH_REQUEST';
 export const authRequest = () => ({
@@ -123,36 +128,8 @@ export const refreshAuthToken = () => (dispatch, getState) => {
         });
 };
 
-export const getCurrentOrders = (orders) => dispatch => {
-    return (
-            fetch(`${API_BASE_URL}/order`,{
-                method: 'GET',
-                headers: {
-                    'Content-Type' : 'application/json',
-                    Authorization: `Bearer ${localStorage.getItem('authToken')}`
-                },
-                body: JSON.stringify(
-                        orders
-                    )
-            })
-        .then(res => normalizeResponseErrors(res))
-        .then(res => dispatch(currentOrders))
-        .catch(err => {
-           const {code} = err;
-                const message =
-                    code === 401
-                        ? 'Incorrect username or password'
-                        : 'Unable to submit order, please log in again';
-        dispatch(authError(err));
-        return Promise.reject(
-                new SubmissionError({
-                    _error: message
-                })
-            )
-        })
-        )
-}
-
+/*
+*/
 export const submitOrder = (order) => dispatch => {
     return (
         fetch(`${API_BASE_URL}/order`, {

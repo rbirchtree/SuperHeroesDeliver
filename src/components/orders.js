@@ -1,8 +1,7 @@
 import React from 'react';
-import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
 import Superhero from './superhero';
-import {reduxForm, Field, focus, formValueSelector} from 'redux-form';
+import {reduxForm, Field} from 'redux-form';
 import {submitOrder} from '../actions/auth';
 import './orders.css';
 import {required, nonEmpty} from '../validators';
@@ -34,7 +33,7 @@ class Orders extends React.Component {
     			)
     	}
 
-    	const { handleSubmit,error } = this.props;
+    	const { handleSubmit } = this.props;
         const message = "order submitted";
         return (
     		<form id="orderForm" 
@@ -134,10 +133,6 @@ class Orders extends React.Component {
     }
 }
 
-
-//does this work with my actions and reducers
-
-//export default requiresLogin()(connect(reduxForm({ form: 'OrderForm'})(Orders)
 export default reduxForm({
 	form: 'orderForm',
 	requiresLogin

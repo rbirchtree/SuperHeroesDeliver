@@ -2,19 +2,14 @@ import React from 'react';
 import {connect} from 'react-redux';
 import { Link} from 'react-router-dom';
 import './header-bar.css';
-
-import {clearAuth, getCurrentOrders} from '../actions/auth';
+import AllOrders from './allOrders.js';
+import {clearAuth} from '../actions/auth';
 import {clearAuthToken} from '../local-storage';
 
 class HeaderBar extends React.Component {
     logOut() {
         this.props.dispatch(clearAuth());
         clearAuthToken();
-    }
-
-    getCurrentOrders(){
-        //make dispatch and check api
-        this.props.dispatch(getCurrentOrders());
     }
 
     render() {
@@ -26,7 +21,7 @@ class HeaderBar extends React.Component {
             logOutButton = (
                 <ul>
                     <li><Link className="logoutBtn" to="/" onClick={() => this.logOut()}>Log out</Link></li>
-                    <li><Link className="currentOrdersBtn" to="/allorders" onClick={() => this.getCurrentOrders()}>Current Orders</Link></li>
+                    <li><Link className="currentOrdersBtn" to="/allorders" Component={AllOrders}>Current Orders </Link></li>
                 </ul>
             );
         }
