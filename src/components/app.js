@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {Switch, Route, withRouter, BrowserRouter as Router} from 'react-router-dom';
-import './APP.css';
+import './app.css';
 import HeaderBar from './header-bar';
 import About from './about';
 import LandingPage from './landing-page';

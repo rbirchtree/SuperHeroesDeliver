@@ -22,7 +22,7 @@ export default function reducer(state = initialState, action) {
         });
     } else if (action.type === RECEIVE_ORDERS){
         return Object.assign({},state,{
-            order: action.order,
+            order: action.orders,
             loading: true
         })
     }

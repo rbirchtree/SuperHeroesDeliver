@@ -29,16 +29,9 @@ class AllOrders extends Component {
 	}
 }
 
-/*const mapDispatchToProps = dispatch => {
-	return { getCurrentOrders:() => dispatch(getCurrentOrders())}
-};*/
-
-/*const mapDispatchToProps = {
-	getCurrentOrders
-};*/
 
 function mapStateToProps(state){
-	console.log(state)
+	console.log(state,"this is state of mapStateToProps")
 	return { orders: state.order.order};
 }
 //export default connect(mapStateToProps)(AllOrders)
