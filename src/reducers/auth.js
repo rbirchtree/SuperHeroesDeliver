@@ -1,4 +1,3 @@
-import _ from "lodash";
 import {
     SET_AUTH_TOKEN,
     CLEAR_AUTH,

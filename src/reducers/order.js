@@ -1,5 +1,3 @@
-import _ from "lodash";
-
 import {
     REQUEST_ORDERS,
     RECEIVE_ORDERS

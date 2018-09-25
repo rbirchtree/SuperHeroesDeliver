@@ -31,7 +31,6 @@ class AllOrders extends Component {
 
 
 function mapStateToProps(state){
-	console.log(state,"this is state of mapStateToProps")
 	return { orders: state.order.order};
 }
 //export default connect(mapStateToProps)(AllOrders)
