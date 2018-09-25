@@ -16,16 +16,6 @@ export const clearAuth = () => ({
     type: CLEAR_AUTH
 });
 
-/*export const REQUEST_ORDERS = 'REQUEST_ORDERS';
-export const requestOrders = () => ({
-    type: REQUEST_ORDERS
-});
-
-export const RECEIVE_ORDERS = 'RECEIVE_ORDERS'
-export const receiveOrders = (json) => ({
-  type: RECEIVE_ORDERS
-});*/
-
 export const AUTH_REQUEST = 'AUTH_REQUEST';
 export const authRequest = () => ({
     type: AUTH_REQUEST
