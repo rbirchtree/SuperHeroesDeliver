@@ -1,0 +1,21 @@
+.orderInfo{
+	
+}
+
+.order{
+	background-color: white;
+	border: solid black 3px;
+	border-radius: 3px;
+	display: block;
+	width: 40%;
+	margin: 15px auto;
+	text-align: left;
+}
+
+
+.orderInfo{
+	padding: 2px;
+}
+.orderInfoSpan{
+	font-style: italic
+}
