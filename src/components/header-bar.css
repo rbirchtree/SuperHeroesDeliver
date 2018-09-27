@@ -41,7 +41,18 @@ ul{
 	padding: 2px;
 }
 
-
+.newOrderBtn{
+	display: inline;
+	position: absolute;
+	background-color: rgb(255,255,255);
+	border: solid black;
+	right: 10px;
+	background-color: white;
+	border-radius: 3px;
+	margin: 120px 0;
+	font-size: .5;
+	padding: 2px;	
+}
 .exclamation{
 	color:red;
 	font-size: 1.3em;

@@ -1,10 +1,13 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import { Link} from 'react-router-dom';
-import './header-bar.css';
-import AllOrders from './allOrders.js';
 import {clearAuth} from '../actions/auth';
 import {clearAuthToken} from '../local-storage';
+
+import './header-bar.css';
+
+import AllOrders from './allOrders.js';
+import Orders from './orders.js'
 
 class HeaderBar extends React.Component {
     logOut() {
@@ -22,6 +25,7 @@ class HeaderBar extends React.Component {
                 <ul>
                     <li><Link className="logoutBtn" to="/" onClick={() => this.logOut()}>Log out</Link></li>
                     <li><Link className="currentOrdersBtn" to="/allorders" Component={AllOrders}>Current Orders </Link></li>
+                    <li><Link className="newOrderBtn" to="/dashboard" Component={Orders}>New Order</Link></li>
                 </ul>
             );
         }
