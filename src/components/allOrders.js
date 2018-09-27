@@ -11,9 +11,13 @@ class AllOrders extends Component {
 	}
 
 	renderOrders() {
+		let i = 0;
 		return _.map(this.props.orders, order => {
+			i = i + 1
+			
 			return (
-				<ul className="order" key={order.toString()}>
+				<ul className="order" data-key={i} key={order.toString()}>
+					<li className="orderInfo">Order #: <span className="orderInfoSpan">{i}</span></li>
 					<li className="orderInfo">Delivery Date: <span className="orderInfoSpan">{order.deliveryDate}</span></li>
 					<li className="orderInfo">Delivery Place: <span className="orderInfoSpan">{order.deliveryPlace}</span></li>
 					<li className="orderInfo">To: <span className="orderInfoSpan">{order.giftTo}</span></li>
@@ -22,6 +26,7 @@ class AllOrders extends Component {
 					<li className="orderInfo">Superhero: <span className="orderInfoSpan">{order.superhero}</span></li>
 				</ul>
 				)
+			//console.log(i,'what is this')
 		})
 	}
 	render(){
