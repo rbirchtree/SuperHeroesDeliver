@@ -2,9 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "devDependencies": {
-    
-  },
+  "devDependencies": {},
   "dependencies": {
     "enzyme": "^3.4.4",
     "enzyme-adapter-react-16": "^1.2.0",

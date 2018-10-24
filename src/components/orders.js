@@ -2,10 +2,13 @@ import React from 'react';
 import requiresLogin from './requires-login';
 import Superhero from './superhero';
 import {reduxForm, Field} from 'redux-form';
-import {submitOrder} from '../actions/auth';
+import {submitOrder} from '../actions/orders';
 import './orders.css';
 import {required, nonEmpty} from '../validators';
-
+//change form to use stripe and add selection
+//calendar
+//place
+//etc
 class Orders extends React.Component {
 	constructor(props){
 		super(props);
@@ -23,10 +26,10 @@ class Orders extends React.Component {
     	this.setState({
     		ordering: true
     	});
-    	//setState redundant?
     }
 
     render() {
+    	console.log(this.state,'state in order')
     	if (this.state.ordering) {
     		return(
     				<p className="success">Order Received!</p>

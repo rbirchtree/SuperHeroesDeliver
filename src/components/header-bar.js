@@ -17,14 +17,12 @@ class HeaderBar extends React.Component {
 
     render() {
         // Only render the log out button if we are logged in
-        //add get all orders...
-        //delete all
         let logOutButton;
         if (this.props.loggedIn) {
             logOutButton = (
                 <ul>
                     <li><Link className="logoutBtn" to="/" onClick={() => this.logOut()}>Log out</Link></li>
-                    <li><Link className="currentOrdersBtn" to="/allorders" Component={AllOrders}>Current Orders </Link></li>
+                    <li><Link className="currentOrdersBtn" to="/allorders" Component={AllOrders}>Your Orders </Link></li>
                     <li><Link className="newOrderBtn" to="/dashboard" Component={Orders}>New Order</Link></li>
                 </ul>
             );

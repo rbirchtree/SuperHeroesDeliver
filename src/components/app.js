@@ -56,10 +56,8 @@ class App extends React.Component {
                     <Route exact path="/about" component={About} />
                     <Route exact path="/allorders" component={AllOrders} />
                     <Route component={NotFound} />
-                </Switch>
-                
+                </Switch>           
                 </div>
-
             </Router>
             
         );
