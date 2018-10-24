@@ -1,14 +1,13 @@
-import React from 'react';
+import React, {Component} from 'react';
+import moment from 'moment';
 import requiresLogin from './requires-login';
 import Superhero from './superhero';
+import renderDatePicker from './scheduledate';
 import {reduxForm, Field} from 'redux-form';
 import {submitOrder} from '../actions/orders';
 import './orders.css';
 import {required, nonEmpty} from '../validators';
-//change form to use stripe and add selection
-//calendar
-//place
-//etc
+
 class Orders extends React.Component {
 	constructor(props){
 		super(props);
@@ -16,20 +15,27 @@ class Orders extends React.Component {
 			hero: 'Spiderman',
 			ordering: false
 		};
+		//this.onChange = this.onChange.bind(this);
 	}
 
     onSubmit(values){
-    	
+    	console.log(values)
     	const {giftTo, giftFrom, superhero, gift, deliveryPlace, deliveryDate, instructions, payment} = values;
     	const order = {giftTo, giftFrom, superhero, gift, deliveryDate, deliveryPlace, instructions, payment};
     	this.props.dispatch(submitOrder(order))
     	this.setState({
     		ordering: true
     	});
+    	//setState redundant?
     }
 
+
+    onChange  = (event,newValue,previousValue,name,allValues) => {
+    	this.setState({
+    		hero: newValue
+    	});
+    }
     render() {
-    	console.log(this.state,'state in order')
     	if (this.state.ordering) {
     		return(
     				<p className="success">Order Received!</p>
@@ -69,7 +75,8 @@ class Orders extends React.Component {
 	        	 	<div className="row">
 		        		<div className="column">
 				        	 <label>Superhero Selection</label>
-					          <Field name="superhero" component="select">
+					          <Field name="superhero" component="select"
+					          onChange={this.onChange}>
 					            <option />
 					            <option value="Batman">Batman</option>
 					            <option value="Superman">Superman</option>
@@ -105,13 +112,19 @@ class Orders extends React.Component {
 											   Austin, TX 78701
 						</option>
 					</Field>
-		          <label>Delivery Date</label>
-		          <Field
-			          name="deliveryDate"
-			          component="textarea"
-			          placeholder="8/1/18 @ 3:00PM"
-			          validate={[required, nonEmpty]}
-			        />
+		          	<label>Delivery Date</label>	
+	          		 <Field
+					  name="deliveryDate"
+					  inputValueFormat="YYYY-MM-DD"
+					  dateFormat="L"
+					  dateFormatCalendar="dddd"
+					  fixedHeight
+					  showMonthDropdown
+					  showYearDropdown
+					  dropdownMode="select"
+					  normalize={value => (value ? moment(value).format('YYYY-MM-DD') : null)}
+					  component={renderDatePicker}
+					/>
 		          <label>Special Instructions</label>
 		          <Field
 		          	rows="5"
@@ -127,9 +140,7 @@ class Orders extends React.Component {
 	          	  	<option value="Paypal">Paypal</option>
 	          	  </Field>
 		        </div>
-    			<button type="submit"
-    			 disabled={this.props.pristine || this.props.submitting}
-    			>Submit</button>
+    			<button type="submit">Submit</button>
     			<Superhero hero={this.state.hero}/>
     		</form>
         );

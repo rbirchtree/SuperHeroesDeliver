@@ -8,16 +8,18 @@
     "enzyme-adapter-react-16": "^1.2.0",
     "jwt-decode": "^2.2.0",
     "lodash": "^4.17.11",
+    "moment": "^2.22.2",
     "react": "^16.2.0",
+    "react-datepicker": "^1.7.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.4",
     "react-router-dom": "^4.1.1",
-    "react-widgets": "^4.4.4",
+    "react-scripts": "1.1.1",
+    "react-widgets": "^4.4.6",
     "redux": "^3.6.0",
     "redux-devtools-extension": "^2.13.5",
     "redux-form": "^7.3.0",
-    "redux-thunk": "^2.2.0",
-    "react-scripts": "1.1.1"
+    "redux-thunk": "^2.2.0"
   },
   "scripts": {
     "start": "react-scripts start",

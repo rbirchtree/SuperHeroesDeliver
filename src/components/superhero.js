@@ -9,7 +9,7 @@ import Superman from '../images/Superman.jpg';
 //if statement logic for batman, superman and spiderman
 //import store
 export default function Superhero(props){
-	console.log(props)
+	
 	let heroPic;
 	if (props.hero === 'Batman') {
 		heroPic = Batman
