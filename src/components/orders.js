@@ -15,18 +15,15 @@ class Orders extends React.Component {
 			hero: 'Spiderman',
 			ordering: false
 		};
-		//this.onChange = this.onChange.bind(this);
 	}
 
     onSubmit(values){
-    	console.log(values)
     	const {giftTo, giftFrom, superhero, gift, deliveryPlace, deliveryDate, instructions, payment} = values;
     	const order = {giftTo, giftFrom, superhero, gift, deliveryDate, deliveryPlace, instructions, payment};
     	this.props.dispatch(submitOrder(order))
     	this.setState({
     		ordering: true
     	});
-    	//setState redundant?
     }
 
 
