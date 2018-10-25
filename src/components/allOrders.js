@@ -3,7 +3,6 @@ import _ from "lodash";
 import { connect } from 'react-redux';
 import { getCurrentOrders } from '../actions/orders';
 import './allOrders.css';
-//import { getCurrentOrders } from '../actions/orders';
 
 class AllOrders extends Component {
 	componentDidMount(){
@@ -11,13 +10,10 @@ class AllOrders extends Component {
 	}
 
 	renderOrders() {
-		let i = 0;
 		return _.map(this.props.orders, order => {
-			i = i + 1
-			
 			return (
-				<ul className="order" data-key={i} key={order.toString()}>
-					<li className="orderInfo">Order #: <span className="orderInfoSpan">{i}</span></li>
+				<ul className="order" key={order.giftTo}>
+					<li className="orderInfo">Order #: <span className="orderInfoSpan"></span></li>
 					<li className="orderInfo">Delivery Date: <span className="orderInfoSpan">{order.deliveryDate}</span></li>
 					<li className="orderInfo">Delivery Place: <span className="orderInfoSpan">{order.deliveryPlace}</span></li>
 					<li className="orderInfo">To: <span className="orderInfoSpan">{order.giftTo}</span></li>
@@ -26,7 +22,6 @@ class AllOrders extends Component {
 					<li className="orderInfo">Superhero: <span className="orderInfoSpan">{order.superhero}</span></li>
 				</ul>
 				)
-			//console.log(i,'what is this')
 		})
 	}
 	render(){
@@ -44,7 +39,7 @@ class AllOrders extends Component {
 
 
 function mapStateToProps(state){
-	return { orders: state.order.order};
+	return { orders: state.orderReducer.orders};
 }
-//export default connect(mapStateToProps)(AllOrders)
+
 export default connect(mapStateToProps, {getCurrentOrders})(AllOrders)

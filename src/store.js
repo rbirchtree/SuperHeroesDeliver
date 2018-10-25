@@ -11,21 +11,11 @@ const store = createStore(
     combineReducers({
         form: formReducer,
         auth: authReducer,
-        order: orderReducer,
-        /*notification: (state, action) => {
-    		if(action.type === "@@redux-form/SET_SUBMIT_SUCCEEDED" && action.meta.form === "registration") {
-    			return "registration succeded //switch for order form"
-    		}
-        	console.log(action)
-        	return null
-
-        }*/
-        
+        orderReducer: orderReducer 
     }),
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
     applyMiddleware(thunk)
 );
-
+//order: orderReducer add back in
 // Hydrate the authToken from localStorage if it exist
 const authToken = loadAuthToken();
 if (authToken) {

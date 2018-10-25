@@ -5,7 +5,8 @@ import './app.css';
 import HeaderBar from './header-bar';
 import About from './about';
 import LandingPage from './landing-page';
-import Orders from './orders'
+import Orders from './orders';
+//import Orders from './orders';
 import RegistrationPage from './registration-page';
 import NotFound from './NotFound';
 import AllOrders from './allOrders';
@@ -56,10 +57,8 @@ class App extends React.Component {
                     <Route exact path="/about" component={About} />
                     <Route exact path="/allorders" component={AllOrders} />
                     <Route component={NotFound} />
-                </Switch>
-                
+                </Switch>           
                 </div>
-
             </Router>
             
         );

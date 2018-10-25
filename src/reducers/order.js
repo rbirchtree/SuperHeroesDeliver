@@ -1,10 +1,11 @@
 import {
     REQUEST_ORDERS,
-    RECEIVE_ORDERS
-} from '../actions/orders'
+    RECEIVE_ORDERS,
+    ORDER_FAIL,
+    ORDER_SUCCESS
+} from '../actions/orders';
 
 const initialState = {
-     // authToken !== null does not mean it has been validated
     loading: false,
     error: null,
     order: null,
@@ -13,16 +14,23 @@ const initialState = {
 
 export default function reducer(state = initialState, action) {
     if (action.type === REQUEST_ORDERS){ 
-        console.log(action,action.type)
         return Object.assign({},state, {
-            order: action.orders,
+            orders: action.orders,
             loading: false
         });
     } else if (action.type === RECEIVE_ORDERS){
         return Object.assign({},state,{
-            order: action.orders,
+            orders: action.orders,
             loading: true
         })
-    }
+    } else if (action.type === ORDER_FAIL){
+        return Object.assign({}, state, {
+            error: action.error
+        });
+    } else if (action.type === ORDER_SUCCESS){
+        return Object.assign({}, state, {
+            order: action.order
+        });
+    } 
     return state;
 }
