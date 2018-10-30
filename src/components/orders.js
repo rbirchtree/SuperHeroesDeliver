@@ -96,12 +96,12 @@ class Orders extends React.Component {
 			          </div>
 				  <div className="row">
 		        		<div className="column">
-		          		<label> Delivery Place</label>
+		          		<label> Delivery Place in Austin</label>
 		          	<Field
 		          		rows="5"
 			          	name="deliveryPlace"
 			          	component="textarea"
-			          	placeholder="1500 Red River St, Austin, TX 78701, 
+			          	placeholder="*Only Austin Addresses *1500 Red River St, Austin, TX 78701, 
 			          	Suite 201 Patient: John Doe"
 			          	validate={[required, nonEmpty]}
 			          	>	
