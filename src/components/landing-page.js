@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {Link, Redirect} from 'react-router-dom';
 import './landing-page.css';
 import LoginForm from './login-form';
-
+import Banner from './banner'
 export function LandingPage(props) {
     // If we are logged in redirect straight to the user's dashboard
     if (props.loggedIn) {
@@ -11,12 +11,11 @@ export function LandingPage(props) {
     }
 
     return (
-        <div>
-            <h2>Can't cheer up your love one? A Superhero can!</h2>
-            <h3>Get Batman to deliver flowers to them! <span role="img" aria-label="bat">🦇</span></h3>
+        <div className="landing">
+            <Banner />
             <LoginForm />
             <Link className="registerLink" to="/register">Register</Link>
-            <Link className="aboutLink" to="/about">About</Link>
+            
         </div>
     );
 }

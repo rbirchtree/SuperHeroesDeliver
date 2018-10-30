@@ -7,7 +7,7 @@ import {clearAuthToken} from '../local-storage';
 import './header-bar.css';
 
 import AllOrders from './allOrders.js';
-import Orders from './orders.js'
+import Orders from './orders.js';
 
 class HeaderBar extends React.Component {
     logOut() {
@@ -21,15 +21,15 @@ class HeaderBar extends React.Component {
         if (this.props.loggedIn) {
             logOutButton = (
                 <ul>
-                    <li><Link className="logoutBtn" to="/" onClick={() => this.logOut()}>Log out</Link></li>
-                    <li><Link className="currentOrdersBtn" to="/allorders" Component={AllOrders}>Your Orders </Link></li>
-                    <li><Link className="newOrderBtn" to="/dashboard" Component={Orders}>New Order</Link></li>
+                    <li><Link className="logout btn" to="/" onClick={() => this.logOut()}>Log out</Link></li>
+                    <li><Link className="currentOrders btn" to="/allorders" Component={AllOrders}>Your Orders </Link></li>
+                    <li><Link className="newOrder btn" to="/dashboard" Component={Orders}>New Order</Link></li>
                 </ul>
             );
         }
         return (
             <div className="header-bar">
-                <Link className="homepage"to={'/'}><h1>Superheroes Deliver<span className="exclamation">!</span></h1></Link>
+                <Link to="/" className="headerLink">Superheroes Deliver<span className="exclamation">!</span></Link>
                 {logOutButton}
             </div>
         );

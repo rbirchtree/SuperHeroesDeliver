@@ -1,58 +1,44 @@
-a {
-	color: black;
-	cursor: pointer;
-	background-color: white
-}
-
-a:hover{
-	color:white;
-	background-color: black;
-}
 
 .homepage{
 	border: none;
+	background-color: none;
+}
+.homepage:hover{
+	background-color: none;
 }
 
-.logoutBtn {
-	display: inline;
-	position: absolute;
-	background-color: rgb(255,255,255);
-	border: solid black;
-	right: 10px;
-	background-color: white;
-	border-radius: 3px;
-	padding: 2px;
-}
+
 
 ul{
 	list-style: none;
 }
-
-.currentOrdersBtn {
+ 
+.btn{
 	display: inline;
 	position: absolute;
 	background-color: rgb(255,255,255);
 	border: solid black;
-	right: 10px;
 	background-color: white;
-	border-radius: 3px;
-	margin: 60px 0;
-	font-size: .5;
+	font-size: .8em;
 	padding: 2px;
+	border-radius: 3px;
 }
 
-.newOrderBtn{
-	display: inline;
-	position: absolute;
-	background-color: rgb(255,255,255);
-	border: solid black;
+.logout {
 	right: 10px;
 	background-color: white;
-	border-radius: 3px;
-	margin: 120px 0;
-	font-size: .5;
-	padding: 2px;	
 }
+
+.currentOrders {
+	right: 10px;
+	margin: 60px 0;
+}
+
+.newOrder{
+	right: 10px;
+	margin: 120px 0;
+}
+
 .exclamation{
 	color:red;
 	font-size: 1.3em;
@@ -64,4 +50,23 @@ h1{
 	display: inline-block;
 	border-radius: 3px;
 	background-color: white;
+} 
+
+.header-bar{
+	text-align: center;
+}
+
+/* Non-mobile, grid */
+@media only screen and (min-width: 640px) {
+  	
+  h1 {
+	font-size: 2em;
+      };
+
+  .login-form > input {
+    width: 20%;
+  };
+  .btn{
+  	font-size: 1.8em;
+  };
 }

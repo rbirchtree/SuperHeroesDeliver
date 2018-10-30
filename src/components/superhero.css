@@ -1,7 +1,13 @@
 img {
-	width: 200px;
 	display: block;
 	margin: 5px auto;
 	border: solid black 3px;
 	border-radius: 4px;
+	width:90%; 
+} 
+
+@media only screen and (min-width: 640px) {
+  	img{
+  		 width:95%; 
+  	}
 }

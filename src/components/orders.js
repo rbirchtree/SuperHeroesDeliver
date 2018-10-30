@@ -35,7 +35,9 @@ class Orders extends React.Component {
     render() {
     	if (this.state.ordering) {
     		return(
-    				<p className="success">Order Received!</p>
+    				<div className="mainContainer">
+    					<p className="success">Order Received!</p>
+					</div>
     			)
     	}
 
@@ -45,12 +47,14 @@ class Orders extends React.Component {
     		<form id="orderForm" 
     		onSubmit={handleSubmit(values => this.onSubmit(values)
     			)}>
-		        <div>
+    			<div className="mainContainer">
+    			 <div className="leftContainer">
 		        	<div className="row">
 		        		{this.props.orders && message}
 		        		<div className="column">
 				        	<label>To</label>
 				        	<Field
+				        	 id="giftTo"
 				        	 name="giftTo"
 				        	 component="input"
 				        	 type="text"
@@ -61,17 +65,18 @@ class Orders extends React.Component {
 			        	 <div className="column">
 				        	 <label>From</label>
 				        	 <Field
+				        	 id="giftFrom"
 				        	 name="giftFrom"
 				        	 component="input"
 				        	 type="text"
 				        	 placeholder="Jane Doe"
 				        	 validate={[required, nonEmpty]}
 				        	 />
-			        	 </div>
-		        	 </div>
+			        	 </div> 
+		        	</div>
 	        	 	<div className="row">
 		        		<div className="column">
-				        	 <label>Superhero Selection</label>
+				        	 <label>Superhero</label>
 					          <Field name="superhero" component="select"
 					          onChange={this.onChange}>
 					            <option />
@@ -81,64 +86,71 @@ class Orders extends React.Component {
 					          </Field>
 				          </div>
 				          <div className="column">
-					          <label>Gift Selection</label>
+					          <label>Gift</label>
 					          <Field name="gift" component="select">
 					            <option />
-					            <option value="Chocolate">Chocolate</option>
 					            <option value="Flowers">Flowers</option>
 					            <option value="none">-none-</option>
 					          </Field>
 				          </div>
 			          </div>
-		          <label> Delivery Place</label>
-		          <Field name="deliveryPlace" component="select">
-						<option>Dell Children's Medical Center (Hospital)
-												4900 Mueller Blvd 
-												Austin, TX 78723
-						</option>
-						<option>Seton Medical Center
-											   1201 W 38th St 
-											   Austin, TX 78705
-						</option>
-						<option>St. David's
-											   919 East 32nd Street
-											   Austin, TX 78705-2709
-						</option>
-						<option>Dell Seton Medical Center @ UT
-											   1500 Red River St
-											   Austin, TX 78701
-						</option>
+				  <div className="row">
+		        		<div className="column">
+		          		<label> Delivery Place</label>
+		          	<Field
+		          		rows="5"
+			          	name="deliveryPlace"
+			          	component="textarea"
+			          	placeholder="1500 Red River St, Austin, TX 78701, 
+			          	Suite 201 Patient: John Doe"
+			          	validate={[required, nonEmpty]}
+			          	>	
 					</Field>
-		          	<label>Delivery Date</label>	
-	          		 <Field
-					  name="deliveryDate"
-					  inputValueFormat="YYYY-MM-DD"
-					  dateFormat="L"
-					  dateFormatCalendar="dddd"
-					  fixedHeight
-					  showMonthDropdown
-					  showYearDropdown
-					  dropdownMode="select"
-					  normalize={value => (value ? moment(value).format('YYYY-MM-DD') : null)}
-					  component={renderDatePicker}
-					/>
-		          <label>Special Instructions</label>
-		          <Field
-		          	rows="5"
-		          	name="instructions"
-		          	component="textarea"
-		          	placeholder="Deliver to Room #123. Say happy birthday from Batman, your dad is sorry he couldn't make it. This is the best he could do."
-		          	validate={[required, nonEmpty]}
-		          	/>
-		          <label>Payment</label>
-	          	  <Field name="payment" component="select">
-	          	  	<option/>
-	          	  	<option value="Credit Card">Credit Card</option>
-	          	  	<option value="Paypal">Paypal</option>
-	          	  </Field>
-		        </div>
-    			<button type="submit">Submit</button>
-    			<Superhero hero={this.state.hero}/>
+						</div>
+						<div className="column">
+		          	<label>Special Instructions</label>
+			          <Field
+			          	rows="5"
+			          	name="instructions"
+			          	component="textarea"
+			          	placeholder="Deliver to Room #201. Say happy birthday from Batman, your dad is sorry he couldn't make it. This is the best he could do."
+			          	validate={[required, nonEmpty]}
+			          	/>
+			          
+					</div>
+				  </div>
+				  <div className="row">
+		        	<div className="column">
+			          	<label>Delivery Date</label>	
+		          		 <Field
+						  name="deliveryDate"
+						  id="deliveryDate"
+						  inputValueFormat="YYYY-MM-DD"
+						  dateFormat="L"
+						  dateFormatCalendar="dddd"
+						  fixedHeight
+						  showMonthDropdown
+						  showYearDropdown
+						  dropdownMode="select"
+						  normalize={value => (value ? moment(value).format('YYYY-MM-DD') : null)}
+						  component={renderDatePicker}
+						/>	
+					</div>
+			          	<div className="column">
+			          <label>Payment</label>
+		          	  <Field name="payment" component="select">
+		          	  	<option/>
+		          	  	<option value="Credit Card">Credit Card</option>
+		          	  	<option value="Paypal">Paypal</option>
+		          	  </Field>
+	          	  </div>
+	          	  </div>
+	          	  </div>
+	          	  <div className="rightContainer">
+			   		<Superhero hero={this.state.hero}/>
+			   </div>
+			   </div>
+    	     <button type="submit">Submit</button>
     		</form>
         );
     }

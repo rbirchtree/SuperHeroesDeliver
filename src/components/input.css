@@ -1,0 +1,15 @@
+
+#username, #password, #lastName, #firstName, #passwordConfirm{
+	width:70%;
+}
+
+/* Non-mobile, grid */
+@media only screen and (min-width: 640px) {
+  	
+  .login-form {
+    width: 30%;
+    margin-bottom: 20px;
+	background-color: white;
+	text-align: center;
+  }
+}

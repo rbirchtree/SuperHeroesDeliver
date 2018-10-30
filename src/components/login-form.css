@@ -1,15 +1,35 @@
-input{
-	width: 100px;
-}
+
 
 .login-form {
-	width: 30%;
+	width: 70%;
 	margin-bottom: 20px;
+	background-color: white;
+	text-align: center;
+	border:solid black 3px;
+	border-radius: 3px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.lflabel{
+	font-weight:bold;
+	font-size:.8em;
 }
 
 
-@media screen and (max-device-width: 800px){
-	.login-form {
-		width: 50%;
-	}
+button{
+	background-color: white;
+	color:black;
+}
+
+
+/* Non-mobile, grid */
+@media only screen and (min-width: 640px) {
+  	
+  .login-form {
+    width: 30%;
+    margin-bottom: 20px;
+	background-color: white;
+	text-align: center;
+  }
 }

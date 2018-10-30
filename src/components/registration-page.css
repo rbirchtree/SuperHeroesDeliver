@@ -1,21 +1,12 @@
-h2 {
-	margin: 10px auto;
+.home{
+	text-align: center;
 }
-
-.registration {
-	display: block;
-	background-color: white;
-	color: black;
-	font-size: 1.2em;
-	margin:20px auto;
+ .registerheader{
+	color:black;
 	border: solid black 3px;
-	border-radius: 4px;
-	text-decoration: none;
-	width: 7%;
-}
+	display: inline-block;
+	border-radius: 3px;
+	background-color: white;
+	font-size: 1.5em;
 
-.registration:hover{
-	display: block;
-	background-color: black;
-	color: white;
 }

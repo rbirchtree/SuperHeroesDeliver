@@ -1,0 +1,41 @@
+
+.banner{	
+	font-size: .7em;
+	color: black;
+	background-color: white;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	border: solid black 3px;
+	border-radius: 3px;	
+	width: 300px;
+	text-align: center;
+	animation: skew 3s infinite;
+  	transform: skew(20deg);
+  	animation-direction: alternate;
+  	opacity: .9;
+} 
+
+.headerLink{
+	font-size: 2em;
+}
+
+@keyframes skew {
+  0% {
+    transform: skewX(20deg);
+  }
+  100% {
+    transform: skewX(-20deg);
+  }
+}
+
+
+
+/* Non-mobile, grid */
+@media only screen and (min-width: 640px) {
+  	
+  .banner {
+	font-size: 1em;
+      }
+}

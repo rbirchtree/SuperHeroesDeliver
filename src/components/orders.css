@@ -5,31 +5,31 @@
 label {
 	display: block;
 	padding: 10px 0;
-	font-style: bold;
+	font-weight: bold;
 }
-div {
+.order {
 	text-align: center;
 	margin: auto; 
 }
 
-form {
+#orderForm {
 	border: black solid 3px;
 	border-radius: 3px;
-	width: 50%;
+	width: 80%;
 	margin: auto;
+	text-align: center;
+	background-color: white;
 }
 
 button{
 	display: block;
 	margin: 5px auto;
-
 }
 
 textarea{
 	display: block;
 	margin: 5px auto;
 }
-
 
 button {
 	font-size: 1.2em;
@@ -47,7 +47,7 @@ button:hover{
 .column {
     float: left;
     width: 50%;
-    padding: 15px 5px;
+    padding: 5px 5px;
     margin: auto;
     text-align: center;
 }
@@ -70,4 +70,68 @@ select{
 	border: solid black 3px;
 	border-radius: 3px;
 	display: inline-block;
+}
+
+  #giftTo, #giftFrom {
+    width: 50%;
+  }
+
+  .column {
+    float: left;
+    width: 100%;
+    padding: 5px 5px;
+    margin: auto;
+    display: inline-block;
+}
+ 
+ #deliveryDate{
+  	width:70%;
+ }
+
+.mainContainer{
+	width: 100%;
+	display: block;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+  .rightContainer{
+	display: block; 
+	margin-right: auto;
+	margin-left: auto;
+	}
+
+
+.leftContainer{
+	display: inline-block;
+	width: 69%;
+}
+
+textarea{
+	width:80%;
+}
+
+/* Non-mobile, grid */
+@media only screen and (min-width: 640px) {
+  	
+  #giftTo, #giftFrom {
+    width: 50%;
+  }
+  .column {
+  	display: inline-block;
+    float: left;
+    width: 33%;
+    padding: 5px 5px;
+    margin: auto;
+    white-space: nowrap;
+    text-align: center;
+  }
+  #deliveryDate{
+  	width:80%;
+  }
+  .rightContainer {
+	display: inline-block; 
+	width: 30%;
+	padding: 3px;
+}
 }

@@ -1,12 +1,12 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {Switch, Route, withRouter, BrowserRouter as Router} from 'react-router-dom';
+import {Switch, Route, withRouter,Link, BrowserRouter as Router} from 'react-router-dom';
 import './app.css';
 import HeaderBar from './header-bar';
 import About from './about';
 import LandingPage from './landing-page';
 import Orders from './orders';
-//import Orders from './orders';
+
 import RegistrationPage from './registration-page';
 import NotFound from './NotFound';
 import AllOrders from './allOrders';
@@ -57,7 +57,8 @@ class App extends React.Component {
                     <Route exact path="/about" component={About} />
                     <Route exact path="/allorders" component={AllOrders} />
                     <Route component={NotFound} />
-                </Switch>           
+                </Switch>
+                <Link className="aboutLink" to="/about">About</Link>           
                 </div>
             </Router>
             
