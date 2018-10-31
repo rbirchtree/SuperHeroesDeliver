@@ -1,6 +1,6 @@
 
 .banner{	
-	font-size: .7em;
+	font-size: .9em;
 	color: black;
 	background-color: white;
 	margin-left: auto;
@@ -36,6 +36,6 @@
 @media only screen and (min-width: 640px) {
   	
   .banner {
-	font-size: 1em;
+	font-size: 1.1em;
       }
 }
