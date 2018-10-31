@@ -14,7 +14,9 @@ a {
 	border-radius: 3px;
 	border: solid black 3px;
 	color: black;
-	background-color: white
+	background-color: white;
+	font-size: 1.2em;
+	padding: 2px;
 }
 
 a:hover{
@@ -22,6 +24,7 @@ a:hover{
 	color: white;
 	cursor: pointer;
 	cursor: pointer;
+	padding: 2px;
 }
 
 .aboutLink{
