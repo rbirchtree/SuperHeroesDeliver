@@ -18,6 +18,7 @@ class AllOrders extends Component {
 						<li className="orderInfo"><span className="orderInfoSpan">Delivery Date:</span> {order.deliveryDate}</li>
 						<li className="orderInfo"><span className="orderInfoSpan">Delivery Place:</span> {order.deliveryPlace}</li>
 						<li className="orderInfo"><span className="orderInfoSpan">To:</span> {order.giftTo}</li>
+						<li className="orderInfo"><span className="orderInfoSpan">From:</span> {order.giftFrom}</li>
 						<li className="orderInfo"><span className="orderInfoSpan">Gift:</span> {order.gift}</li>
 						<li className="orderInfo"><span className="orderInfoSpan">Instructions:</span> {order.instructions}</li>
 						<li className="orderInfo"><span className="orderInfoSpan">Superhero:</span> {order.superhero}</li>

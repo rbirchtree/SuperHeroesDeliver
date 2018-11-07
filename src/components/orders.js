@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import moment from 'moment';
 import requiresLogin from './requires-login';
 import Superhero from './superhero';
+import SecureCheckOut from './SecureCheckOut';
 import renderDatePicker from './scheduledate';
 import {reduxForm, Field} from 'redux-form';
 import {submitOrder} from '../actions/orders';
@@ -33,10 +34,13 @@ class Orders extends React.Component {
     	});
     }
     render() {
+    	//add in compononent for stripe, don't forget to set-remote url and remove comments
     	if (this.state.ordering) {
     		return(
     				<div className="mainContainer">
-    					<p className="success">Order Received!</p>
+    					<p className="success">Complete your purchase! Superheros 
+    					Deliver charges $150</p>
+    					<SecureCheckOut/>
 					</div>
     			)
     	}
@@ -136,13 +140,7 @@ class Orders extends React.Component {
 						  component={renderDatePicker}
 						/>	
 					</div>
-			          	<div className="column">
-			          <label>Payment</label>
-		          	  <Field name="payment" component="select">
-		          	  	<option/>
-		          	  	<option value="Credit Card">Credit Card</option>
-		          	  	<option value="Paypal">Paypal</option>
-		          	  </Field>
+			       <div className="column">
 	          	  </div>
 	          	  </div>
 	          	  </div>
