@@ -10,28 +10,28 @@ class AllOrders extends Component {
 	}
 
 	renderOrders() {
+		console.log(this.props,'props')
 		return _.map(this.props.orders, order => {
 			return (
-				<ul className="order" key={order.giftTo}>
-					<li className="orderInfo">Order #: <span className="orderInfoSpan"></span></li>
-					<li className="orderInfo">Delivery Date: <span className="orderInfoSpan">{order.deliveryDate}</span></li>
-					<li className="orderInfo">Delivery Place: <span className="orderInfoSpan">{order.deliveryPlace}</span></li>
-					<li className="orderInfo">To: <span className="orderInfoSpan">{order.giftTo}</span></li>
-					<li className="orderInfo">Gift: <span className="orderInfoSpan">{order.gift}</span></li>
-					<li className="orderInfo">Instructions: <span className="orderInfoSpan">{order.instructions}</span></li>
-					<li className="orderInfo">Superhero: <span className="orderInfoSpan">{order.superhero}</span></li>
-				</ul>
+					<ul className="allOrders" key={order.giftTo}>
+						<li className="orderInfo"><span className="orderInfoSpan">Order #: </span> {order._id}</li>
+						<li className="orderInfo"><span className="orderInfoSpan">Delivery Date:</span> {order.deliveryDate}</li>
+						<li className="orderInfo"><span className="orderInfoSpan">Delivery Place:</span> {order.deliveryPlace}</li>
+						<li className="orderInfo"><span className="orderInfoSpan">To:</span> {order.giftTo}</li>
+						<li className="orderInfo"><span className="orderInfoSpan">Gift:</span> {order.gift}</li>
+						<li className="orderInfo"><span className="orderInfoSpan">Instructions:</span> {order.instructions}</li>
+						<li className="orderInfo"><span className="orderInfoSpan">Superhero:</span> {order.superhero}</li>
+					</ul>
 				)
 		})
 	}
+
 	render(){
 		
 		return(
-			<div>
-				<h3>Your Orders</h3>
-				
+			<div className="centerDiv">
+				<h3 className="allOrdersTitle">Your Orders</h3>
 					{this.renderOrders()}
-				
 			</div>
 			)
 	}
