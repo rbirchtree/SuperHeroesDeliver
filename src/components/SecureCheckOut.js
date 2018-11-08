@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 import {Elements, StripeProvider} from 'react-stripe-elements';
 import CheckoutForm from './CheckoutForm';
+const keys = require('./keys');
 
 class SecureCheckOut extends Component {
   render() {
     return (
-      <StripeProvider apiKey="">
-        <div className="example">
-          <h1>React Stripe Elements Example</h1>
+      <StripeProvider apiKey={keys.stripe.developmentStripe}>
+        <div>
           <Elements>
             <CheckoutForm />
           </Elements>

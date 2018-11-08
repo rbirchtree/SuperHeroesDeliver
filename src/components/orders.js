@@ -38,9 +38,10 @@ class Orders extends React.Component {
     	if (this.state.ordering) {
     		return(
     				<div className="mainContainer">
-    					<p className="success">Complete your purchase! Superheros 
-    					Deliver charges $150</p>
+    					<div className="success">Superheros 
+    					Deliver charges $150 via Credit Card
     					<SecureCheckOut/>
+    					</div>
 					</div>
     			)
     	}

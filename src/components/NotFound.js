@@ -3,7 +3,7 @@ import './NotFound.css';
 
 const NotFound = () => (
 	<div>
-		<h4>404! Invisible Man has gone missing!</h4>
+		<h5>404! Invisible Man has gone missing!</h5>
 	</div>
 );
 

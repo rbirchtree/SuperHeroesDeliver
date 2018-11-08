@@ -65,11 +65,13 @@ select{
 .success{
 	background-color: white;
 	color: green;
-	font-size: 3em;
+	font-size: 1.5em;
 	text-align: center;
 	border: solid black 3px;
 	border-radius: 3px;
 	display: inline-block;
+	width: 50%;
+	padding: 4px;
 }
 
   #giftTo, #giftFrom {

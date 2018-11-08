@@ -5,7 +5,6 @@ import './landing-page.css';
 import LoginForm from './login-form';
 import Banner from './banner'
 export function LandingPage(props) {
-    // If we are logged in redirect straight to the user's dashboard
     if (props.loggedIn) {
         return <Redirect to="/dashboard" />;
     }

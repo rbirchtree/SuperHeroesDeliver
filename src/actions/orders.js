@@ -30,8 +30,8 @@ export const getCurrentOrders = (orders) => dispatch => {
         .then(res => normalizeResponseErrors(res))
         .then(res => res.json())
         .then(res => {
-		  dispatch(requestOrders(res))
-		})
+          dispatch(requestOrders(res))
+        })
         .catch(err => {
            const {code} = err;
                 const message =
