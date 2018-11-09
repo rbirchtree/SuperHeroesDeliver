@@ -34,12 +34,11 @@ class Orders extends React.Component {
     	});
     }
     render() {
-    	//add in compononent for stripe, don't forget to set-remote url and remove comments
     	if (this.state.ordering) {
     		return(
     				<div className="mainContainer">
     					<div className="success">Superheros 
-    					Deliver charges $150 via Credit Card
+    					Deliver charges $175 via Credit Card
     					<SecureCheckOut/>
     					</div>
 					</div>

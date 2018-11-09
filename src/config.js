@@ -3,5 +3,3 @@ export const API_BASE_URL =
     //below are two different urls for local host api
     //1 http://localhost:8080/api 
     //https://safe-island-33727.herokuapp.com/
-    //2 'https://superherodeliverserver.herokuapp.com/api';
-    //https://dashboard.heroku.com/apps/superherodeliverserver/deploy/github
