@@ -6,7 +6,7 @@ const keys = require('./keys');
 class SecureCheckOut extends Component {
   render() {
     return (
-      <StripeProvider apiKey={keys.stripe.developmentStripe}>
+      <StripeProvider apiKey="pk_test_ARlDsbrXPfRp3RxSfAYYIIMw">
         <div>
           <Elements>
             <CheckoutForm />
