@@ -10,7 +10,6 @@ class AllOrders extends Component {
 	}
 
 	renderOrders() {
-		console.log(this.props,'props')
 		return _.map(this.props.orders, order => {
 			return (
 					<ul className="allOrders" key={order.giftTo}>

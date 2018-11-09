@@ -13,7 +13,7 @@ class CheckoutForm extends Component {
   async submit(ev) {
   let {token} = await this.props.stripe.createToken({name: "Name"});
   
-  let response = await fetch("https://safe-island-33727.herokuapp.com/api/stripe/charge", {
+  let response = await fetch("https://fierce-oasis-81437.herokuapp.com/api/stripe/charge", {
     method: "POST",
     headers: {"Content-Type": "text/plain"},
     mode: "no-cors",
