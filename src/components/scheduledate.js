@@ -53,6 +53,8 @@ export default class renderDatePicker extends React.Component {
           {...rest}
           selected={this.state.selectedDate}
           onChange={this.handleChange}
+          excludeDates={[moment(), moment().subtract(7, "days")]}
+          placeholderText="Must be 7 days out!" 
         />
         {touched &&
           error &&

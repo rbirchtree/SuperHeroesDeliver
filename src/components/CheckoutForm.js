@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {CardElement, injectStripe} from 'react-stripe-elements';
+import {CardNumberElement,CardExpiryElement, CardCVCElement,injectStripe} from 'react-stripe-elements';
 import './checkoutForm.css';
 
 
@@ -21,7 +21,6 @@ class CheckoutForm extends Component {
   });
   if (response.ok === false) this.setState({complete: true});
 }
-
   render() {
     if (this.state.complete){
       return (
@@ -30,7 +29,9 @@ class CheckoutForm extends Component {
     }
       return (
         <div className="checkout">
-          <CardElement />
+          <CardNumberElement/>
+          <CardExpiryElement/>
+          <CardCVCElement/>
           <button onClick={this.submit}>Send</button>
         </div>
       );

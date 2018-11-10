@@ -65,13 +65,14 @@ select{
 .success{
 	background-color: white;
 	color: green;
-	font-size: 1.5em;
+	font-size: 1em;
 	text-align: center;
 	border: solid black 3px;
 	border-radius: 3px;
 	display: inline-block;
 	width: 50%;
 	padding: 4px;
+	margin: auto;
 }
 
   #giftTo, #giftFrom {
@@ -87,7 +88,7 @@ select{
 }
  
  #deliveryDate{
-  	width:70%;
+  	width:100%;
  }
 
 .mainContainer{
@@ -101,12 +102,12 @@ select{
 	display: block; 
 	margin-right: auto;
 	margin-left: auto;
-	}
+}
 
 
 .leftContainer{
 	display: inline-block;
-	width: 69%;
+	width: 60%;
 }
 
 textarea{
@@ -135,5 +136,9 @@ textarea{
 	display: inline-block; 
 	width: 30%;
 	padding: 3px;
-}
+   }
+   .success{
+   	font-size: 1em;
+   	margin: auto;
+   }
 }
