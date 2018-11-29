@@ -40,6 +40,10 @@ button {
 }
 
 button:hover{
+	transition:background-color 1s ease-out;
+	-webkit-transition: background-color 1s ease-out;
+	-moz-transition: background-color 1s ease-out;
+	-o-transition: background-color 1s ease-out;
 	background-color: black;
 	color: white;
 }

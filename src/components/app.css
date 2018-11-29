@@ -23,8 +23,11 @@ a:hover{
 	background-color:black;
 	color: white;
 	cursor: pointer;
-	cursor: pointer;
 	padding: 2px;
+	-webkit-transition: background-color 1s ease-out;
+	-moz-transition: background-color 1s ease-out;
+	-o-transition: background-color 1s ease-out;
+	transition: background-color 1s ease-out;
 }
 
 .aboutLink{
