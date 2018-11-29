@@ -3,8 +3,8 @@
 }
 
 label {
-	display: block;
-	padding: 10px 0;
+	display: inline-block;
+	padding: 10px 10px 0 0;
 	font-weight: bold;
 }
 .order {
@@ -38,7 +38,9 @@ button {
 	margin:20px auto;
 	cursor: pointer;
 }
-
+h5{
+	display: inline;
+}
 button:hover{
 	transition:background-color 1s ease-out;
 	-webkit-transition: background-color 1s ease-out;
@@ -81,6 +83,7 @@ select{
 
   #giftTo, #giftFrom {
     width: 50%;
+    display: inline-block;
   }
 
   .column {
@@ -109,6 +112,8 @@ select{
 }
 
 
+
+
 .leftContainer{
 	display: inline-block;
 	width: 60%;
@@ -124,6 +129,7 @@ textarea{
   #giftTo, #giftFrom {
     width: 50%;
   }
+
   .column {
   	display: inline-block;
     float: left;
@@ -133,6 +139,7 @@ textarea{
     white-space: nowrap;
     text-align: center;
   }
+
   #deliveryDate{
   	width:80%;
   }
@@ -140,6 +147,7 @@ textarea{
 	display: inline-block; 
 	width: 30%;
 	padding: 3px;
+	float:right;
    }
    .success{
    	font-size: 1em;

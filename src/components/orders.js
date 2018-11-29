@@ -145,6 +145,7 @@ class Orders extends React.Component {
 	          	  </div>
 	          	  </div>
 	          	  <div className="rightContainer">
+	          	  	<label className="heroLabel">Hero Selected</label>
 			   		<Superhero hero={this.state.hero}/>
 			   </div>
 			   </div>
