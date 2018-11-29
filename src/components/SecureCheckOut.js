@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Elements, StripeProvider} from 'react-stripe-elements';
 import CheckoutForm from './CheckoutForm';
-import {stripeAPIKEY} from '../config';
+import {stripeAPIKEY} from './keys';
 
 class SecureCheckOut extends Component {
   render() {
