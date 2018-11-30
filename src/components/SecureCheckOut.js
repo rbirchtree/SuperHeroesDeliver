@@ -6,7 +6,7 @@ import {stripeAPIKey} from '../config';
 class SecureCheckOut extends Component {
   render() {
     return (
-      <StripeProvider apiKey={stripeAPIKEY}>
+      <StripeProvider apiKey={stripeAPIKey}>
         <div>
           <Elements>
             <CheckoutForm />
