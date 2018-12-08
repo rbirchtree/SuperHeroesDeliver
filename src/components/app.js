@@ -56,7 +56,7 @@ class App extends React.Component {
                     <Route exact path="/allorders" component={AllOrders} />
                     <Route component={NotFound} />
                 </Switch>
-                <Link className="aboutLink" to="/about">About</Link>           
+                    <Link className="aboutLink" to="/about">About</Link>           
                 </div>
             </Router>
             

@@ -19,8 +19,8 @@ class Orders extends React.Component {
 	}
 
     onSubmit(values){
-    	const {giftTo, giftFrom, superhero, gift, deliveryPlace, deliveryDate, instructions, payment} = values;
-    	const order = {giftTo, giftFrom, superhero, gift, deliveryDate, deliveryPlace, instructions, payment};
+    	const {phoneNumber,giftTo, giftFrom, superhero, gift, deliveryPlace, deliveryDate, instructions, payment} = values;
+    	const order = {phoneNumber,giftTo, giftFrom, superhero, gift, deliveryDate, deliveryPlace, instructions, payment};
     	this.props.dispatch(submitOrder(order))
     	this.setState({
     		ordering: true
@@ -38,7 +38,7 @@ class Orders extends React.Component {
     		return(
     				<div className="mainContainer">
     					<div className="success">Superheros 
-    					Deliver charges $175 via Credit Card
+    					Deliver charges <b>$175</b> via Credit Card
     					<SecureCheckOut/>
     					</div>
 					</div>
@@ -141,6 +141,15 @@ class Orders extends React.Component {
 						/>	
 					</div>
 			       <div className="column">
+			       <label>Phone Number</label>
+			        <Field
+			        	name="phoneNumber"
+			        	id="phoneNumber"
+			        	type="text"
+			          	component="input"
+			          	placeholder="512-555-555"
+			          	validate={[required, nonEmpty]}
+			          	/>
 	          	  </div>
 	          	  </div>
 	          	  </div>
