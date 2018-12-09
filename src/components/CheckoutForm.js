@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {CardNumberElement,CardExpiryElement, CardCVCElement,injectStripe} from 'react-stripe-elements';
 import './checkoutForm.css';
-import {connect} from 'react-redux';
+
 
 class CheckoutForm extends Component {
   constructor(props) {
@@ -21,11 +21,7 @@ class CheckoutForm extends Component {
     mode: "no-cors",
     body: token.id
   });
-  if (response.ok === true) this.setState({complete: true});
-  //changed reponse to ok
-  if(this.state.complete === true){
-    alert("success")
-  }
+  if (response.ok === false) this.setState({complete: true});
 }
 
     handleChange(event) {
