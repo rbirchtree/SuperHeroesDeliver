@@ -160,7 +160,7 @@ class Orders extends React.Component {
 			   		<Superhero hero={this.state.hero}/>
 			   </div>
 			   </div>
-    	     <button type="submit">Submit</button>
+    	     <button type="submit" disabled>Submit</button>
     		</form>
         );
     }

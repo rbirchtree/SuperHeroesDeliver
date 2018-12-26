@@ -14,7 +14,10 @@ export function LandingPage(props) {
             <Banner />
             <LoginForm />
             <Link className="registerLink" to="/register">Register</Link>
-            
+            <ul className="footer">
+                <li><Link className="demoAbout" to="/about">About</Link></li>
+                <li><Link className="demoAbout" to="/demo">Demo</Link></li>   
+            </ul>            
         </div>
     );
 }

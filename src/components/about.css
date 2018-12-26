@@ -35,6 +35,24 @@
 	text-align: left;
 }
 
+.footer{
+   position: fixed;
+   bottom: 0;
+   width: 100%;
+   text-align: center;
+};
+
+.demoAbout{
+	display: inline-block;
+	background-color:white;
+  	margin-right: 20px;
+  	font-size: 1em;
+  	text-align: center;
+  	padding: 3px;
+  	float: left;
+};
+
+
 /* Non-mobile, grid */
 @media only screen and (min-width: 640px) {
   .about {

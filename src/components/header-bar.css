@@ -52,7 +52,8 @@ h1{
 
 .header-bar{
 	text-align: center;
-	font-family: "Permanent Marker"
+	font-family: "Permanent Marker";
+	margin-bottom: 20px;
 }
 
 /* Non-mobile, grid */
