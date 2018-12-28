@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 import {CardNumberElement,CardExpiryElement, CardCVCElement,injectStripe} from 'react-stripe-elements';
 import './checkoutForm.css';
-
+import CreditCards from '../images/creditcards.jpg';
 
 class CheckoutForm extends Component {
   constructor(props) {
   super(props);
   this.state = {complete: false,
-                 value: "Batman"};
+                 value: "John Doe"};
   this.submit = this.submit.bind(this);
   this.handleChange = this.handleChange.bind(this);
 }
@@ -40,13 +40,15 @@ class CheckoutForm extends Component {
             <label>
               Full Name:
             </label>
-              <input class="ccName" type="text" value={this.state.value} onChange={this.handleChange}/>
-            
-          </form>
-            <CardNumberElement/>
-            <CardExpiryElement/>
-            <CardCVCElement/>
+              <input className="ccName" type="text" value={this.state.value} onChange={this.handleChange}/>
+            <div className="centering">
+              <CardNumberElement />
+              <CardExpiryElement/>
+              <CardCVCElement/>
+            </div>
+            <img src={CreditCards}/>
           <button onClick={this.submit}>Send</button>
+          </form>
         </div>
       );
   }

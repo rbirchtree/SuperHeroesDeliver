@@ -22,6 +22,6 @@ export default function Superhero(props){
 		heroPic = Superman;
 	}
 	return (
-		<img src={heroPic} alt={props.hero} />
+		<img className="hero" src={heroPic} alt={props.hero} />
 		)
-}
+};

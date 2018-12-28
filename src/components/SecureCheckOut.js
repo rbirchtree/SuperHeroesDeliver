@@ -7,11 +7,9 @@ class SecureCheckOut extends Component {
   render() {
     return (
       <StripeProvider apiKey={stripeAPIKey}>
-        <div>
           <Elements>
             <CheckoutForm />
           </Elements>
-        </div>
       </StripeProvider>
     );
   }
