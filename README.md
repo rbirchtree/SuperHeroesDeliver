@@ -1,4 +1,4 @@
-# Super Heros Deliver 
+# Superheros Deliver 
 * This is an front end built in primarily in React and Redux 
 
 ## Purpose
