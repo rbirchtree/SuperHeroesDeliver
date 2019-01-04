@@ -17,14 +17,14 @@ a {
 	color: black;
 	background-color: white;
 	font-size: 1em;
-	padding: 2px;
+	padding: 3px;
 }
 
 a:hover{
 	background-color:black;
 	color: white;
 	cursor: pointer;
-	padding: 2px;
+	padding: 3px;
 	-webkit-transition: background-color 1s ease-out;
 	-moz-transition: background-color 1s ease-out;
 	-o-transition: background-color 1s ease-out;

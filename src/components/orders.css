@@ -21,23 +21,20 @@ label {
 	background-color: white;
 }
 
-button{
-	display: block;
-	margin: 5px auto;
-}
-
 textarea{
 	display: block;
 	margin: 5px auto;
 }
 
 button {
+	display: block;
 	font-size: 1.2em;
 	border: solid black 3px;
 	border-radius: 4px;
 	margin:20px auto;
 	cursor: pointer;
 }
+
 h5{
 	display: inline;
 }
