@@ -32,11 +32,9 @@ a:hover{
 
 .aboutlink{
 	display: inline-block;
-	position: absolute;
-	top: -93%;
-	right: 2%; 
 	background-color:white;
-  	margin-right: 20px;
+	margin-right: 20px;
+	margin-bottom: 20px;
   	font-size: 1em;
   	text-align: center;
   	padding: 2px;

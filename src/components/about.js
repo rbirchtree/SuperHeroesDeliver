@@ -19,10 +19,6 @@ export default function About(){
 			 <span className="logo"> Superheroes Deliver</span><span className="punction">!</span> was founded by Rob Birch. 
 			 If you have issues, please call (512) 515-1628.
 			 </p>
-			 <ul className="footer">
-                <li><Link className="demoAbout" to="/about">About</Link></li>
-                <li><Link className="demoAbout" to="/demo">Demo</Link></li>   
-            </ul>    
 		</div>
 		)
 }
