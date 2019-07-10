@@ -23,9 +23,22 @@ ul{
 	z-index:1;
 }
 
+.main{
+	font-size: 3em;
+}
+
 .logout {
 	right: 10px;
 	background-color: white;
+}
+
+.logout:hover, .currentOrders:hover, .newOrder:hover{
+	background-color:black;
+	color: white;
+	-webkit-transition: background-color 1s ease-out;
+	-moz-transition: background-color 1s ease-out;
+	-o-transition: background-color 1s ease-out;
+	transition: background-color 1s ease-out;
 }
 
 .currentOrders {
@@ -55,6 +68,7 @@ h1{
 	text-align: center;
 	font-family: "Permanent Marker";
 	margin-bottom: 20px;
+	padding: 0px 10px;
 }
 
 /* Non-mobile, grid */

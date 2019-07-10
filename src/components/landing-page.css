@@ -1,10 +1,28 @@
-
-.landing{
+.landing {
 	text-align: center;
 	margin:auto;
 }
 
-.footer{
+.register {
+   font-family: "Permanent Marker",comic-sans;
+   font-size: 1.5em;
+   background-color:white;
+   color:black;
+   border: solid black 3px;
+   border-radius: 3px;
+   padding: 3px;
+}
+
+.register:hover {
+	background-color:black;
+	color: white;
+	-webkit-transition: background-color 1s ease-out;
+	-moz-transition: background-color 1s ease-out;
+	-o-transition: background-color 1s ease-out;
+	transition: background-color 1s ease-out;
+}
+
+.footer {
 	position: fixed;
    bottom: 0;
    width: 100%;

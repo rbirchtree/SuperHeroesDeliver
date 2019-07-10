@@ -4,6 +4,7 @@ import {Link, Redirect} from 'react-router-dom';
 import './landing-page.css';
 import LoginForm from './login-form';
 import Banner from './banner'
+
 export function LandingPage(props) {
     if (props.loggedIn) {
         return <Redirect to="/dashboard" />;
@@ -13,7 +14,7 @@ export function LandingPage(props) {
         <div className="landing">
             <Banner />
             <LoginForm />
-            <Link className="som" to="/register">Register</Link>
+            <Link className="register" to="/register">Register</Link>
         </div>
     );
 }

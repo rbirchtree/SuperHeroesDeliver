@@ -92,10 +92,12 @@ class Orders extends React.Component {
 					          </Field>
 				          </div>
 				          <div className="column">
-					          <label>Gift</label>
+					          <label>Flowers</label>
 					          <Field name="gift" component="select">
 					            <option />
-					            <option value="Flowers">Flowers</option>
+					            <option value="Roses">Roses</option>
+								<option value="Seasonal Flowers">Seasonal Flowers</option>
+								<option value="Patriotic Flowers">Patriotic Flowers</option>
 					            <option value="none">-none-</option>
 					          </Field>
 				          </div>

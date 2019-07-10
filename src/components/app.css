@@ -10,7 +10,7 @@ body {
   height: 100%;
 }
 
-a {
+.main {
 	text-decoration: none;
 	border-radius: 3px;
 	border: solid black 3px;
@@ -20,7 +20,7 @@ a {
 	padding: 3px;
 }
 
-a:hover{
+.main:hover{
 	background-color:black;
 	color: white;
 	cursor: pointer;
@@ -32,6 +32,7 @@ a:hover{
 
 .aboutlink{
 	display: inline-block;
+	color:black;
 	background-color:white;
 	margin-right: 20px;
 	margin-bottom: 20px;
@@ -42,3 +43,11 @@ a:hover{
 	font-family: "Permanent Marker",comic-sans;
 };
 
+.aboutlink:hover {
+	background-color:black;
+	color:white;
+	-webkit-transition: background-color 1s ease-out;
+	-moz-transition: background-color 1s ease-out;
+	-o-transition: background-color 1s ease-out;
+	transition: background-color 1s ease-out;
+}

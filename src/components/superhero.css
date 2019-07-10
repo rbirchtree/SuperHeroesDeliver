@@ -1,9 +1,9 @@
 .hero {
 	display: block;
-	margin: 5px auto;
+	margin: auto;
 	border: solid black 3px;
 	border-radius: 4px;
-	width:70%; 
+	/* width:70%;  */
 } 
 
 /* Non-mobile, grid */
