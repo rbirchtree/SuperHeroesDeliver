@@ -1,13 +1,12 @@
 .aboutTitle {
 	background-color: rgb(255,255,255);
-	font-family: comic-sans;
+	font-family: "Permanent Marker",comic-sans;
 	margin-left: auto;
 	margin-right: auto;
 	border: solid black;
 	border-radius: 4px;
-	padding: 4px;
+	padding: 5px;
 	display: inline-block;
-	padding: 2px;
 }
 
 .container{
@@ -29,7 +28,7 @@
 	border: solid black 3px;
 	border-radius: 3px;
 	width: 30%;
-	padding: 4px;
+	padding: 20px;
 	font-size: 1.1em;
 	font-family: comic-sans;
 	text-align: left;
@@ -44,8 +43,8 @@
 };
 
 .demoAbout{
-	display: inline-block;
 	background-color:white;
+	display: inline-block;
   	margin-right: 20px;
   	font-size: 1em;
   	text-align: center;
@@ -57,14 +56,6 @@
 /* Non-mobile, grid */
 @media only screen and (max-width: 600px) {
 	.about {
-	  background-color: lightblue;
-	  font-size:30em;
+	  width: 60%;
 	}
   }
-
-.art{
-	border:none;
-	color:black;
-	padding: 0;
-	margin:0;
-}

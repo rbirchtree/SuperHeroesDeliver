@@ -6,6 +6,8 @@ label {
 	display: block;
 	padding: 10px 10px 0 0;
 	font-weight: bold;
+	font-family: "Permanent Marker",comic-sans;
+	font-size: 1.2em;
 }
 .order {
 	text-align: center;
@@ -34,6 +36,7 @@ button {
 	border-radius: 4px;
 	margin:20px auto;
 	cursor: pointer;
+	font-family: "Permanent Marker",comic-sans;
 }
 
 h5{

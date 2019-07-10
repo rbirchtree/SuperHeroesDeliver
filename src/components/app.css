@@ -30,14 +30,17 @@ a:hover{
 	transition: background-color 1s ease-out;
 }
 
-.demoAbout{
+.aboutlink{
 	display: inline-block;
+	position: absolute;
+	top: -93%;
+	right: 2%; 
 	background-color:white;
   	margin-right: 20px;
   	font-size: 1em;
   	text-align: center;
   	padding: 2px;
-  	float: left;
+	float: left;
+	font-family: "Permanent Marker",comic-sans;
 };
-
 

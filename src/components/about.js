@@ -15,7 +15,7 @@ export default function About(){
 			 but they are better when delivered by a superhero.
 			 </p>
 			 <p className="about">
-			 Artwork is by Terry Huddleston, his website is <a className="art" href="https://www.terryhuddlestonart.com/">terryhuddlestonart.com.</a>
+			 Artwork is by Terry Huddleston, his website is terryhuddlestonart.com.
 			 <span className="logo"> Superheroes Deliver</span><span className="punction">!</span> was founded by Rob Birch. 
 			 If you have issues, please call (512) 515-1628.
 			 </p>
