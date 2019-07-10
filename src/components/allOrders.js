@@ -12,7 +12,7 @@ class AllOrders extends Component {
 	renderOrders() {
 		return _.map(this.props.orders, order => {
 			return (
-					<ul className="allOrders" key={order.giftTo}>
+					<ul className="allOrders" key={order._id}>
 						<li className="orderInfo"><span className="orderInfoSpan">Order #: </span> {order._id}</li>
 						<li className="orderInfo"><span className="orderInfoSpan">Delivery Date:</span> {order.deliveryDate}</li>
 						<li className="orderInfo"><span className="orderInfoSpan">Delivery Place:</span> {order.deliveryPlace}</li>
