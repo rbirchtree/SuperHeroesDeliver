@@ -19,6 +19,7 @@ label {
 	margin: auto;
 	text-align: center;
 	background-color: white;
+	opacity: 0.8;
 }
 
 textarea{
@@ -38,6 +39,7 @@ button {
 h5{
 	display: inline;
 }
+
 button:hover{
 	transition:background-color 1s ease-out;
 	-webkit-transition: background-color 1s ease-out;
@@ -82,7 +84,7 @@ select{
 	margin: auto;
 }
 
-  #giftTo, #giftFrom {
+#giftTo, #giftFrom {
     width: 50%;
     display: inline-block;
   }
@@ -111,9 +113,6 @@ select{
 	margin-right: auto;
 	margin-left: auto;
 }
-
-
-
 
 .leftContainer{
 	display: inline-block;
@@ -144,10 +143,12 @@ textarea{
   .ccName{
    width: 300px;
    margin-bottom: 3px;
-   } 		
+   } 
+
   #deliveryDate{
   	width:80%;
   }
+
   .rightContainer {
 	display: inline-block; 
 	width: 30%;

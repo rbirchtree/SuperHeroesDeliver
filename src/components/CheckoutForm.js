@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {CardNumberElement,CardExpiryElement, CardCVCElement,injectStripe,StripeProvider} from 'react-stripe-elements';
+import {CardNumberElement,CardExpiryElement, CardCVCElement,injectStripe} from 'react-stripe-elements';
 import './checkoutForm.css';
 import CreditCards from '../images/creditcards.jpg';
 
@@ -34,8 +34,7 @@ class CheckoutForm extends Component {
           <div className="black">Thank you for your order! Please log out! Only submit once!</div>
         )
     }
-      return (
-        <StripeProvider apiKey="pk_live_vtVDsFJjoX417gqmdyamimQb00pRxUP8Lx">
+      return (        
           <div className="checkout">
             <form>
               <label>
@@ -51,7 +50,6 @@ class CheckoutForm extends Component {
             <button onClick={this.submit}>Send</button>
             </form>
           </div>
-        </StripeProvider> 
       );
   }
 }

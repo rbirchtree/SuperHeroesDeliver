@@ -38,7 +38,7 @@ class Orders extends React.Component {
     		return(
     				<div className="mainContainer">
     					<div className="success">Superheros 
-    					Deliver charges <b>$175</b> via Credit Card
+    					Deliver charges <b>$219</b> via Credit Card
     					<SecureCheckOut/>
     					</div>
 					</div>
