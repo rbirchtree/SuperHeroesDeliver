@@ -46,7 +46,7 @@ class CheckoutForm extends Component {
                 <CardExpiryElement/>
                 <CardCVCElement/>
               </div>
-              <img src={CreditCards}/>
+              <img alt="credit card logos" src={CreditCards}/>
             <button onClick={this.submit}>Send</button>
             </form>
           </div>

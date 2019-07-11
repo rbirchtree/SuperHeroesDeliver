@@ -9,10 +9,6 @@ label {
 	font-family: "Permanent Marker",comic-sans;
 	font-size: 1.2em;
 }
-.order {
-	text-align: center;
-	margin: auto; 
-}
 
 #orderForm {
 	border: black solid 3px;
@@ -25,10 +21,6 @@ label {
 	opacity: 0.8;
 }
 
-textarea {
-	display: block;
-	margin: 5px auto;
-}
 
 button {
 	display: block;
@@ -49,10 +41,9 @@ button:hover {
 	color: white;
 }
 
-h5{
+h5 {
 	display: inline;
 }
-
 
 .row:after {
     content: "";
@@ -60,16 +51,16 @@ h5{
     clear: both;
 }
 
-select{
-	width: 100px;
+select {
+	width: 50%;
 }
 
-.ccName{
+.ccName {
    width: 50%;
    margin-bottom: 3px;
 }
 
-.success{
+.success {
 	background-color: white;
 	font-size: 1em;
 	text-align: center;
@@ -84,38 +75,18 @@ select{
 #giftTo, #giftFrom {
     width: 50%;
     display: inline-block;
-  }
+}
 
 .column {
-    float: left;
-    width: 50%;
-    padding: 5px 5px;
-    margin: auto;
-	display: inline-block;
-	text-align: center;
-} 
-
+	float: left;
+	width: 100%;
+	padding: 10px;
+  }
+  
  #deliveryDate {
   	width:100%;
  }
 
-.mainContainer {
-	width: 100%;
-	display: block;
-	box-sizing: border-box;
-	text-align: center;
-}
-
-.rightContainer {
-	display: block; 
-	margin-right: auto;
-	margin-left: auto;
-}
-
-.leftContainer {
-	display: inline-block;
-	width: 60%;
-}
 
 textarea {
 	width:80%;
@@ -146,13 +117,6 @@ textarea {
   #deliveryDate{
   	width:80%;
   }
-
-  .rightContainer {
-	display: inline-block; 
-	width: 30%;
-	padding: 3px;
-	float:right;
-   }
    .success{
    	font-size: 1em;
    	margin: auto;
