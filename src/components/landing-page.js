@@ -16,9 +16,9 @@ export function LandingPage(props) {
             <LoginForm />
             <Link className="register" to="/register">Register</Link>
             <ul className="reviews">
-                    <li>She loved it! -Dave</li>
-                    <li>THAT.IS.AWESOMe!-Jennifer</li>
-                    <li>So awesome! -Doug</li>
+                    <li>"She loved it!" -Dave</li>
+                    <li>"THAT.IS.AWESOMe!" -Jennifer</li>
+                    <li>"So awesome!" -Doug</li>
             </ul>
         </div>
     );

@@ -25,7 +25,7 @@ label {
 	opacity: 0.8;
 }
 
-textarea{
+textarea {
 	display: block;
 	margin: 5px auto;
 }
@@ -44,7 +44,7 @@ h5{
 	display: inline;
 }
 
-button:hover{
+button:hover {
 	transition:background-color 1s ease-out;
 	-webkit-transition: background-color 1s ease-out;
 	-moz-transition: background-color 1s ease-out;
@@ -59,7 +59,7 @@ button:hover{
     padding: 5px 5px;
     margin: auto;
     text-align: center;
-}
+} 
 
 .row:after {
     content: "";
@@ -93,13 +93,13 @@ select{
     display: inline-block;
   }
 
-  .column {
+.column {
     float: left;
     width: 100%;
     padding: 5px 5px;
     margin: auto;
     display: inline-block;
-}
+} 
  
  #deliveryDate{
   	width:100%;
