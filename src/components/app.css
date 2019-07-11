@@ -12,7 +12,7 @@ body {
 
 .main {
 	text-decoration: none;
-	border-radius: 3px;
+	border-radius: 10px;
 	border: solid black 3px;
 	color: black;
 	background-color: white;
@@ -37,11 +37,15 @@ body {
 	background-color:white;
 	margin-right: 20px;
 	margin-bottom: 20px;
+	border-radius:10px;
+	border: solid black 3px;
   	font-size: 1em;
   	text-align: center;
   	padding: 2px;
 	float: left;
 	font-family: "Permanent Marker",comic-sans;
+	position:relative;
+	margin-top:100%;
 };
 
 .aboutlink:hover {

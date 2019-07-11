@@ -11,7 +11,6 @@ export function RegistrationPage(props) {
     }
     return (
         <div className="home">
-            <h2 class="registerheader">Register</h2>
             <RegistrationForm />
         </div>
     );
