@@ -55,11 +55,6 @@ class App extends React.Component {
                     <Route exact path="/allorders" component={AllOrders} />
                     <Route component={NotFound} />
                 </Switch>
-                <ul className="reviews">
-                    <li>She loved it! -Dave</li>
-                    <li>THAT.IS.AWESOMe!-Jennifer</li>
-                    <li>So awesome! -Doug</li>
-                </ul>
                 <ul className="footer">
                     <li><Link className="aboutlink" to="/about">About</Link></li>
                 </ul>                  

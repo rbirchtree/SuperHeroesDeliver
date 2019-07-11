@@ -22,6 +22,39 @@
 	transition: background-color 1s ease-out;
 }
 
+.reviews li{
+	position: relative;
+	background-color:white;
+	margin: 20px;
+	display: inline-block;
+	border-radius: 3px;
+	padding: 5px;
+	border: black solid 3px;
+}
+.reviews li:nth-child(1){
+	margin-top: 5px;
+	position: relative;
+	top: 15px;
+	color:orange;
+}
+
+.reviews li:nth-child(2){
+	margin-top: 15px;
+	position: relative;
+	top: 10px;
+	color:yellowgreen;
+}
+.reviews li:nth-child(3){
+	position: relative;
+	top: 25px;
+	color:blue;
+}
+.reviews {
+	width: 100%;
+	list-style-type:none;
+	text-align: center;
+}
+
 .footer {
 	position: fixed;
    bottom: 0;
