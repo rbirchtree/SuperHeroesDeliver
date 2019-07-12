@@ -1,18 +1,19 @@
-.black{
+.black {
 	color: black;
 }
 
-.checkout{
+.checkout {
 	text-align: center;
 	padding: 10px;
+	margin: auto;
 }
 
-.ccName{
+.ccName {
 	padding-bottom: 3px;
 	width:50%;
 }
 
-.centering{
+.centering {
 	margin-left: auto;
 	margin-right: auto;
 	border: black solid 3px;

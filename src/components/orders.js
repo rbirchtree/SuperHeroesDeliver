@@ -48,7 +48,6 @@ class Orders extends React.Component {
     	const { handleSubmit } = this.props;
         const message = "order submitted";
         return (
-			<div>
     		<form id="orderForm" 
     		onSubmit={handleSubmit(values => this.onSubmit(values)
     			)}>    			
@@ -139,13 +138,11 @@ class Orders extends React.Component {
 					<div className="column">
 	          	  	<label>Hero Selected</label>
 			   		<Superhero hero={this.state.hero}/>
-					</div>	          	  
-    	     	
+					</div>	          	       	
 				 </div>	
+				 <button type="submit">Submit</button>
     		</form>
-			<button type="submit">Submit</button>
-			</div>
-			
+				
         );
     }
 }

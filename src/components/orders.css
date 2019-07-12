@@ -67,7 +67,7 @@ select {
 	border: solid black 3px;
 	border-radius: 3px;
 	display: inline-block;
-	width: 50%;
+	width: 70%;
 	padding: 4px;
 	margin: auto;
 }
@@ -90,6 +90,10 @@ select {
 
 textarea {
 	width:80%;
+}
+.mainContainer{
+	text-align: center;
+	opacity: .8;
 }
 
 /* Non-mobile, grid */
@@ -119,6 +123,7 @@ textarea {
   }
    .success{
    	font-size: 1em;
-   	margin: auto;
+	margin: auto;
+	width: 500px;
    }
 }

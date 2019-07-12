@@ -32,7 +32,7 @@ a, a:link, a:visited, a:focus, a:hover, a:active{
 	background-color: white;
 	opacity: .8;
 	border: solid black 3px;
-	border-radius: 3px;
+	border-radius: 10px;
 	width: 30%;
 	padding: 20px;
 	font-size: 1.1em;

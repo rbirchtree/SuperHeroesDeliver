@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './input.css';
 
 export default class Input extends React.Component {
