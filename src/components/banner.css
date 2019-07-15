@@ -1,27 +1,26 @@
-
-.banner{	
+.banner {	
 	font-size: .95em;
 	color: black;
 	background-color: white;
 	margin-left: auto;
 	margin-right: auto;
-	margin-bottom: 20px;
+	margin-bottom: 100px;
 	margin-top: 20px;
 	border: solid black 3px;
-	border-radius: 3px;	
+	border-radius: 5px;	
 	width: 300px;
 	text-align: center;
 	animation: skew 2.5s infinite;
   	transform: skew(20deg);
   	animation-direction: alternate;
-  	opacity: .75;
+	opacity: .75;  
 } 
 
-.smiley{
+.smiley {
 	font-size: 1.2em;
 }
 
-.headerLink{
+.headerLink {
 	font-size: 2em;
 	padding: 5px;
 }
@@ -29,10 +28,10 @@
 @keyframes skew {
   
   from {
-  	transform: rotate(-3deg);
+	  transform: rotate(-3deg);
   }
   to{
-  	transform: rotate(3deg);
+	  transform: rotate(3deg);
   }
 }
 

@@ -1,7 +1,7 @@
 .allOrders{
 	background-color: white;
 	border: solid black 3px;
-	border-radius: 3px;
+	border-radius: 10px;
 	display: block;
 	width: 60%;
 	margin-left: auto;
@@ -19,7 +19,7 @@
 .allOrdersTitle{
 	background-color: white;
 	border: solid black 3px;
-	border-radius: 3px;
+	border-radius: 10px;
 	display: inline-block;
 }
 

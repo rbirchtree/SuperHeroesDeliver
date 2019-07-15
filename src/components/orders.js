@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import moment from 'moment';
 import requiresLogin from './requires-login';
 import Superhero from './superhero';
@@ -38,7 +38,7 @@ class Orders extends React.Component {
     		return(
     				<div className="mainContainer">
     					<div className="success">Superheros 
-    					Deliver charges <b>$175</b> via Credit Card
+    					Deliver charges <b>$219</b> via credit card.
     					<SecureCheckOut/>
     					</div>
 					</div>
@@ -50,12 +50,10 @@ class Orders extends React.Component {
         return (
     		<form id="orderForm" 
     		onSubmit={handleSubmit(values => this.onSubmit(values)
-    			)}>
-    			<div className="mainContainer">
-    			 <div className="leftContainer">
-		        	<div className="row">
+    			)}>    			
 		        		{this.props.orders && message}
-		        		<div className="column">
+		        	<div className="row">
+						<div className="column">
 				        	<label>To</label>
 				        	<Field
 				        	 id="giftTo"
@@ -64,9 +62,7 @@ class Orders extends React.Component {
 				        	 type="text"
 				        	 placeholder="John Doe"
 				        	 validate={[required, nonEmpty]}
-				        	 />
-			        	 </div>
-			        	 <div className="column">
+				        	 />			        	
 				        	 <label>From</label>
 				        	 <Field
 				        	 id="giftFrom"
@@ -76,10 +72,7 @@ class Orders extends React.Component {
 				        	 placeholder="Jane Doe"
 				        	 validate={[required, nonEmpty]}
 				        	 />
-			        	 </div> 
-		        	</div>
-	        	 	<div className="row">
-		        		<div className="column">
+
 				        	 <label>Superhero</label>
 					          <Field name="superhero" component="select"
 					          onChange={this.onChange}>
@@ -90,19 +83,17 @@ class Orders extends React.Component {
 					            <option value="CaptainAmerica">Captain America</option>
 					            <option value="WonderWoman">WonderWoman</option>
 					          </Field>
-				          </div>
-				          <div className="column">
-					          <label>Gift</label>
+					          <label>Flowers</label>
 					          <Field name="gift" component="select">
 					            <option />
-					            <option value="Flowers">Flowers</option>
+					            <option value="Roses">Roses</option>
+								<option value="Seasonal Flowers">Seasonal Flowers</option>
+								<option value="Patriotic Flowers">Patriotic Flowers</option>
 					            <option value="none">-none-</option>
 					          </Field>
-				          </div>
-			          </div>
-				  <div className="row">
-		        		<div className="column">
-		          		<label> Delivery Place</label>
+							  </div>
+						<div className="column">
+					  <label> Delivery Place</label>
 		          	<Field
 		          		rows="5"
 			          	name="deliveryPlace"
@@ -112,21 +103,14 @@ class Orders extends React.Component {
 			          	validate={[required, nonEmpty]}
 			          	>	
 					</Field>
-						</div>
-						<div className="column">
 		          	<label>Special Instructions</label>
 			          <Field
 			          	rows="5"
 			          	name="instructions"
 			          	component="textarea"
-			          	placeholder="Deliver to Room #201. Say happy birthday from Batman, your dad is sorry he couldn't make it. This is the best he could do."
+			          	placeholder="Deliver to Room #201. Say happy birthday from Spiderman, your dad is sorry he couldn't make it. This is the best he could do."
 			          	validate={[required, nonEmpty]}
 			          	/>
-			          
-					</div>
-				  </div>
-				  <div className="row">
-		        	<div className="column">
 			          	<label>Delivery Date</label>	
 		          		 <Field
 						  name="deliveryDate"
@@ -141,8 +125,6 @@ class Orders extends React.Component {
 						  normalize={value => (value ? moment(value).format('YYYY-MM-DD') : null)}
 						  component={renderDatePicker}
 						/>	
-					</div>
-			       <div className="column">
 			       <label>Phone Number</label>
 			        <Field
 			        	name="phoneNumber"
@@ -152,16 +134,15 @@ class Orders extends React.Component {
 			          	placeholder="512-555-555"
 			          	validate={[required, nonEmpty]}
 			          	/>
-	          	  </div>
-	          	  </div>
-	          	  </div>
-	          	  <div className="rightContainer">
-	          	  	<label className="heroLabel">Hero Selected</label>
+					</div>
+					<div className="column">
+	          	  	<label>Hero Selected</label>
 			   		<Superhero hero={this.state.hero}/>
-			   </div>
-			   </div>
-    	     <button type="submit">Submit</button>
+					</div>	          	       	
+				 </div>	
+				 <button type="submit">Submit</button>
     		</form>
+				
         );
     }
 }

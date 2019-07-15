@@ -1,10 +1,61 @@
-
-.landing{
+.landing {
 	text-align: center;
 	margin:auto;
 }
 
-.footer{
+.register {
+   font-family: "Permanent Marker",comic-sans;
+   font-size: 1.5em;
+   background-color:white;
+   color:black;
+   border: solid black 3px;
+   border-radius: 10px;
+   padding: 3px;
+}
+
+.register:hover {
+	background-color:black;
+	color: white;
+	-webkit-transition: background-color 1s ease-out;
+	-moz-transition: background-color 1s ease-out;
+	-o-transition: background-color 1s ease-out;
+	transition: background-color 1s ease-out;
+}
+
+.reviews li{
+	position: relative;
+	background-color:white;
+	margin: 20px;
+	display: inline-block;
+	border-radius: 10px;
+	padding: 5px;
+	border: black solid 3px;
+}
+.reviews li:nth-child(1){
+	margin-top: 5px;
+	position: relative;
+	top: 15px;
+	color:orange;
+}
+
+.reviews li:nth-child(2){
+	margin-top: 15px;
+	position: relative;
+	top: 10px;
+	color:yellowgreen;
+}
+.reviews li:nth-child(3){
+	position: relative;
+	top: 25px;
+	color:blue;
+}
+.reviews {
+	width: 100%;
+	list-style-type:none;
+	text-align: center;
+}
+
+.footer {
 	position: fixed;
    bottom: 0;
    width: 100%;

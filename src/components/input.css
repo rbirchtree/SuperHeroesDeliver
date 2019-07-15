@@ -1,4 +1,3 @@
-
 #username, #password, #lastName, #firstName, #passwordConfirm{
 	width:70%;
 }
@@ -9,7 +8,7 @@
   .login-form {
     width: 30%;
     margin-bottom: 20px;
-	background-color: white;
-	text-align: center;
+	  background-color: white;
+	  text-align: center;
   }
 }
