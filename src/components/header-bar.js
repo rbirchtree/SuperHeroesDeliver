@@ -25,7 +25,7 @@ class HeaderBar extends React.Component {
         }
         return (
             <div className="header-bar">
-                <Link to="/" className="headerLink">Superheroes Deliver<span className="exclamation">!</span></Link>
+                <Link to="/" className="main">Superheroes Deliver<span className="exclamation">!</span></Link>
                 {logOutButton}
             </div>
         );

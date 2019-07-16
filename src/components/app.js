@@ -6,7 +6,6 @@ import HeaderBar from './header-bar';
 import About from './about';
 import LandingPage from './landing-page';
 import Orders from './orders';
-import Demo from './demo';
 import RegistrationPage from './registration-page';
 import NotFound from './NotFound';
 import AllOrders from './allOrders';
@@ -54,12 +53,10 @@ class App extends React.Component {
                     <Route exact path="/register" component={RegistrationPage} />
                     <Route exact path="/about" component={About} />
                     <Route exact path="/allorders" component={AllOrders} />
-                    <Route exact path="/demo" component={Demo} />
                     <Route component={NotFound} />
                 </Switch>
                 <ul className="footer">
-                    <li><Link className="demoAbout" to="/about">About</Link></li>
-                    <li><Link className="demoAbout" to="/demo">Demo</Link></li>   
+                    <li><Link className="aboutlink" to="/about">About</Link></li>
                 </ul>                  
                 </div>
             </Router>

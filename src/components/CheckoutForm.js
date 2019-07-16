@@ -15,7 +15,7 @@ class CheckoutForm extends Component {
   async submit(ev) {
   let {token} = await this.props.stripe.createToken({name: this.state.value});
   
-  let response = await fetch("https://fierce-oasis-81437.herokuapp.com/api/stripe/charge", {
+  let response = await fetch("https://superheroesdeliverserver.herokuapp.com/api/stripe/charge", {
     method: "POST",
     headers: {"Content-Type": "text/plain"},
     mode: "no-cors",
@@ -34,22 +34,22 @@ class CheckoutForm extends Component {
           <div className="black">Thank you for your order! Please log out! Only submit once!</div>
         )
     }
-      return (
-        <div className="checkout">
-          <form>
-            <label>
-              Full Name:
-            </label>
-              <input className="ccName" type="text" value={this.state.value} onChange={this.handleChange}/>
-            <div className="centering">
-              <CardNumberElement />
-              <CardExpiryElement/>
-              <CardCVCElement/>
-            </div>
-            <img src={CreditCards}/>
-          <button onClick={this.submit}>Send</button>
-          </form>
-        </div>
+      return (        
+          <div className="checkout">
+            <form>
+              <label>
+                Full Name:
+              </label>
+                <input className="ccName" type="text" value={this.state.value} onChange={this.handleChange}/>
+              <div className="centering">
+                <CardNumberElement />
+                <CardExpiryElement/>
+                <CardCVCElement/>
+              </div>
+              <img alt="credit card logos" src={CreditCards}/>
+            <button onClick={this.submit}>Send</button>
+            </form>
+          </div>
       );
   }
 }

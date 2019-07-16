@@ -2,6 +2,7 @@
 	border: none;
 	background-color: none;
 }
+
 .homepage:hover{
 	background-color: none;
 }
@@ -22,10 +23,9 @@ ul{
 	z-index:1;
 }
 
-.main{
+.main {
 	font-size: 1.5em;
 }
-
 
 
 .logout:hover, .currentOrders:hover, .newOrder:hover{
@@ -68,11 +68,35 @@ h1 {
 	background-color: white;
 } 
 
-.header-bar{
+.header-bar {
 	text-align: center;
 	font-family: "Permanent Marker";
 	margin-bottom: 20px;
 	padding: 0px 10px;
+}
+
+.main{
+	cursor: pointer;
+	-webkit-transition: background-color 1s ease-out;
+	-moz-transition: background-color 1s ease-out;
+	-o-transition: background-color 1s ease-out;
+	transition: background-color 1s ease-out;
+	display: inline-block;
+	background-color:white;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 3px;
+	border: solid black 3px;
+	color: black;
+	background-color: white;
+	font-size: 1.5em;
+	padding: 3px;
+}
+
+
+.main:hover {
+	background-color:black;
+	color:white;
 }
 
 /* Non-mobile, grid */
