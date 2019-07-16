@@ -13,8 +13,8 @@ class CheckoutForm extends Component {
 }
 
   async submit(ev) {
+    ev.preventDefault()
   let {token} = await this.props.stripe.createToken({name: this.state.value});
-  
   let response = await fetch("https://superheroesdeliverserver.herokuapp.com/api/stripe/charge", {
     method: "POST",
     headers: {"Content-Type": "text/plain"},
@@ -29,6 +29,7 @@ class CheckoutForm extends Component {
     }
 
   render() {
+    
     if (this.state.complete){
       return (
           <div className="black">Thank you for your order! Please log out! Only submit once!</div>
