@@ -15,7 +15,7 @@
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.4",
     "react-router-dom": "^4.1.1",
-    "react-scripts": "1.1.1",
+    "react-scripts": "5.0.1",
     "react-stripe-elements": "^2.0.1",
     "react-widgets": "^4.4.6",
     "redux": "^3.6.0",
